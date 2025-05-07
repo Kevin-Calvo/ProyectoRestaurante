@@ -32,6 +32,10 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Convertir el nombre de usuario a minúsculas
+      id: lowercase
+      run: echo "repository_owner=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
     - name: Construir imagen Docker
       run: |
         docker build -t ghcr.io/${{ github.repository_owner }}/reserva-restaurante:latest .
