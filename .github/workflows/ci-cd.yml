@@ -38,7 +38,7 @@ jobs:
 
     - name: Construir imagen Docker
       run: |
-        docker build -t ghcr.io/${{ github.repository_owner }}/reserva-restaurante:latest .
+        docker build -t ghcr.io/${{ env.repository_owner }}/reserva-restaurante:latest .
 
     - name: Subir imagen a GHCR
       run: |
