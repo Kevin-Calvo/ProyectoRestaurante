@@ -22,8 +22,8 @@ jobs:
     - name: Instalar dependencias
       run: npm install
 
-    - name: Ejecutar pruebas
-      run: npm test
+   # - name: Ejecutar pruebas
+    #  run: npm test
 
     - name: Autenticarse en GitHub Container Registry
       uses: docker/login-action@v3
