@@ -32,6 +32,12 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Configurar Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      with:
+        use-buildx: true
+        driver: containerd  # Usar containerd como driver
+
     - name: Convertir el nombre de usuario a minúsculas
       id: lowercase
       run: echo "repository_owner=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
@@ -45,4 +51,5 @@ jobs:
         tags: ghcr.io/${{ env.repository_owner }}/reserva-restaurante:${{ github.sha }}
         cache-from: type=gha
         cache-to: type=local,mode=max,source=/tmp/.buildx-cache
+
 
