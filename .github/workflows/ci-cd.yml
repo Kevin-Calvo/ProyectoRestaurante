@@ -1,5 +1,9 @@
 name: CI/CD - Node.js con Docker + GHCR
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   push:
     branches: [ main ]
