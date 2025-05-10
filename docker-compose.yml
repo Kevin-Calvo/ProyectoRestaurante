@@ -32,9 +32,108 @@ services:
       - "3000:3000"
     networks:
       - app_network
+  mongocfg1:
+    image: mongo:6.0
+    container_name: mongocfg1
+    command: mongod --configsvr --replSet mongors1conf --port 27017
+    volumes:
+      - ./data/mongocfg1:/data/db
+    networks:
+      - mongo-cluster
+
+  mongocfg2:
+    image: mongo:6.0
+    container_name: mongocfg2
+    command: mongod --configsvr --replSet mongors1conf --port 27017
+    volumes:
+      - ./data/mongocfg2:/data/db
+    networks:
+      - mongo-cluster
+
+  mongocfg3:
+    image: mongo:6.0
+    container_name: mongocfg3
+    command: mongod --configsvr --replSet mongors1conf --port 27017
+    volumes:
+      - ./data/mongocfg3:/data/db
+    networks:
+      - mongo-cluster
+
+  # Shard 1 Replica Set
+  mongors1n1:
+    image: mongo:6.0
+    container_name: mongors1n1
+    command: mongod --shardsvr --replSet mongors1 --port 27017
+    volumes:
+      - ./data/mongors1n1:/data/db
+    networks:
+      - mongo-cluster
+
+  mongors1n2:
+    image: mongo:6.0
+    container_name: mongors1n2
+    command: mongod --shardsvr --replSet mongors1 --port 27017
+    volumes:
+      - ./data/mongors1n2:/data/db
+    networks:
+      - mongo-cluster
+
+  mongors1n3:
+    image: mongo:6.0
+    container_name: mongors1n3
+    command: mongod --shardsvr --replSet mongors1 --port 27017
+    volumes:
+      - ./data/mongors1n3:/data/db
+    networks:
+      - mongo-cluster
+
+  # Shard 2 Replica Set
+  mongors2n1:
+    image: mongo:6.0
+    container_name: mongors2n1
+    command: mongod --shardsvr --replSet mongors2 --port 27017
+    volumes:
+      - ./data/mongors2n1:/data/db
+    networks:
+      - mongo-cluster
+
+  mongors2n2:
+    image: mongo:6.0
+    container_name: mongors2n2
+    command: mongod --shardsvr --replSet mongors2 --port 27017
+    volumes:
+      - ./data/mongors2n2:/data/db
+    networks:
+      - mongo-cluster
+
+  mongors2n3:
+    image: mongo:6.0
+    container_name: mongors2n3
+    command: mongod --shardsvr --replSet mongors2 --port 27017
+    volumes:
+      - ./data/mongors2n3:/data/db
+    networks:
+      - mongo-cluster
+
+  # Mongos Router
+  mongos:
+    image: mongo:6.0
+    container_name: mongos
+    depends_on:
+      - mongocfg1
+      - mongocfg2
+      - mongocfg3
+    ports:
+      - "37017:27017"
+    command: >
+      mongos --configdb mongors1conf/mongocfg1:27017,mongocfg2:27017,mongocfg3:27017
+    networks:
+      - mongo-cluster
 
 volumes:
   postgres_data:
 
 networks:
   app_network:
+  mongo-cluster:
+    driver: bridge
