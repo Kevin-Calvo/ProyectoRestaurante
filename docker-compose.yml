@@ -16,9 +16,8 @@ services:
     networks:
       - app_network
 
-  api:
+  microservicio-principal:
     image: ghcr.io/${GHCR_USER}/reserva-restaurante:latest  # ← Aquí va la version
-    container_name: reserva_api
     restart: always
     depends_on:
       - db
@@ -28,8 +27,9 @@ services:
       DB_PASS: postgres
       DB_HOST: db
       DB_PORT: 5432
-    ports:
-      - "3000:3000"
+      SYNC: "true"
+    expose:
+      - "3000"
     networks:
       - app_network
   mongocfg1:
@@ -129,6 +129,53 @@ services:
       mongos --configdb mongors1conf/mongocfg1:27017,mongocfg2:27017,mongocfg3:27017
     networks:
       - mongo-cluster
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    networks:
+      - app_network
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.2
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    networks:
+      - app_network
+
+
+  microservicio-busqueda:
+    build:
+      context: ./microservicio-busqueda
+    expose:
+      - "4000"
+    networks:
+      - app_network
+    depends_on:
+      - elasticsearch
+
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-balanceador
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - microservicio-principal
+      - microservicio-busqueda
+    networks:
+      - app_network
 
 volumes:
   postgres_data:
