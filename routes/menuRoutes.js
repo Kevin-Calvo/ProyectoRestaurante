@@ -3,6 +3,7 @@ const { createMenuItem, getMenuByRestaurant, updateMenuItem, deleteMenuItem } = 
 const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
+require('dotenv').config(); 
 
 /**
  * @openapi

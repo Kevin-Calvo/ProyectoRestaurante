@@ -3,6 +3,7 @@ const { createOrder } = require('../controllers/orderController');
 const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
+require('dotenv').config(); 
 
 /**
  * @openapi

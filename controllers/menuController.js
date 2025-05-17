@@ -16,7 +16,7 @@ switch (process.env.DB_MODE) {
     break;
 
   default:
-    throw new Error(`[menuController] Tipo de base de datos no soportado: ${process.env.DB_TYPE}`);
+    throw new Error(`[menuController] Tipo de base de datos no soportado: ${process.env.DB_MODE}`);
 }
 
 // Reexporta las funciones del controlador elegido

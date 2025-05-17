@@ -2,8 +2,9 @@
 require('dotenv').config();
 
 let controller;
+console.log('DEBUG - DB_MODE =', process.env.DB_MODE);
 
-switch (process.env.DB_TYPE) {
+switch (process.env.DB_MODE) {
   case 'mongo':
     console.log('[restauranteController] Usando controlador MongoDB');
     controller = require('./restauranteControllerMongo');
@@ -15,7 +16,7 @@ switch (process.env.DB_TYPE) {
     break;
 
   default:
-    throw new Error(`[restauranteController] Tipo de base de datos no soportado: ${process.env.DB_TYPE}`);
+    throw new Error(`[restauranteController] Tipo de base de datos no soportado: ${process.env.DB_MODE}`);
 }
 
 module.exports = {

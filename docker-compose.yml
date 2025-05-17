@@ -17,20 +17,23 @@ services:
       - app_network
 
   microservicio-principal:
+    env_file:
+      - .env
     image: ghcr.io/${GHCR_USER}/reserva-restaurante:latest  # ← Aquí va la version
     restart: always
     depends_on:
       - db
       - redis
-    environment:
-      DB_NAME: ${DB_NAME}
-      DB_USER: ${DB_USER}
-      DB_PASS: ${DB_PASS}
-      DB_HOST: ${DB_HOST}
-      DB_PORT: ${DB_PORT}
-      REDIS_HOST: ${REDIS_HOST}
-      REDIS_PORT: ${REDIS_PORT}
-      SYNC: "true"
+    #environment:
+     # DB_TYPE: ${DB_TYPE}
+     # DB_NAME: ${DB_NAME}
+     # DB_USER: ${DB_USER}
+     # DB_PASS: ${DB_PASS}
+     # DB_HOST: ${DB_HOST}
+     # DB_PORT: ${DB_PORT}
+     # REDIS_HOST: ${REDIS_HOST}
+     # REDIS_PORT: ${REDIS_PORT}
+     # SYNC: "true"
     expose:
       - "3000"
     networks:
