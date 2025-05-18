@@ -1,99 +1,28 @@
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
-require('dotenv').config();
+// controllers/menuController.js
+require('dotenv').config(); // Carga las variables del archivo .env
 
-const updateUser = async (req, res) => {
-    try {
-        const { name, email, password } = req.body;
-        const user = await User.findByPk(req.user.id);
+let controller;
 
-        if (!user) {
-            return res.status(404).json({ message: 'Usuario no encontrado' });
-        }
+// Selecciona el controlador según el tipo de base de datos definido en .env
+switch (process.env.DB_MODE) {
+  case 'mongo':
+    console.log('[authController] Usando controlador MongoDB');
+    controller = require('./authControllerMongo');
+    break;
 
-        if (name) user.name = name;
-        if (email) user.email = email;
-        if (password) {
-            const salt = await bcrypt.genSalt(10);
-            user.password = await bcrypt.hash(password, salt);
-        }
+  case 'postgres':
+    console.log('[authontroller] Usando controlador PostgreSQL');
+    controller = require('./authControllerPostgres');
+    break;
 
-        await user.save();  //  Esto es lo que guarda los cambios en la BD
+  default:
+    throw new Error(`[authController] Tipo de base de datos no soportado: ${process.env.DB_MODE}`);
+}
 
-        res.json({ message: 'Usuario actualizado correctamente' });
-
-    } catch (error) {
-        console.error('Error en updateUser:', error);
-        res.status(500).json({ message: 'Error al actualizar usuario', error });
-    }
+// Reexporta las funciones del controlador elegido
+module.exports = {
+  register: controller.register,
+  login: controller.login,
+  updateUser: controller.updateUser,
+  deleteUser: controller.deleteUser,
 };
-
-
-// Eliminar usuario (Solo Admin)
-const deleteUser = async (req, res) => {
-    try {
-        const user = await User.findByPk(req.params.id);
-
-        if (!user) {
-            return res.status(404).json({ message: 'Usuario no encontrado' });
-        }
-
-        await user.destroy();
-        res.json({ message: 'Usuario eliminado correctamente' });
-
-    } catch (error) {
-        res.status(500).json({ message: 'Error al eliminar usuario', error });
-    }
-};
-
-const register = async (req, res) => {
-    try {
-        const { name, email, password, role } = req.body;
-
-        // Verificar si el usuario ya existe
-        const existingUser = await User.findOne({ where: { email } });
-        if (existingUser) {
-            return res.status(400).json({ message: 'El usuario ya existe' });
-        }
-
-        // Hashear la contraseña
-        const hashedPassword = await bcrypt.hash(password, 10);
-
-        // Crear el usuario
-        const user = await User.create({ name, email, password: hashedPassword, role });
-
-        res.status(201).json({ message: 'Usuario registrado con éxito' });
-    } catch (error) {
-        res.status(500).json({ message: 'Error en el servidor', error });
-    }
-};
-
-const login = async (req, res) => {
-    try {
-        const { email, password } = req.body;
-
-        // Buscar el usuario
-        const user = await User.findOne({ where: { email } });
-        if (!user) {
-            return res.status(404).json({ message: 'Usuario no encontrado' });
-        }
-
-        // Verificar la contraseña
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) {
-            return res.status(401).json({ message: 'Contraseña incorrecta' });
-        }
-
-        // Generar token JWT
-        const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, {
-            expiresIn: '1h'
-        });
-
-        res.json({ token });
-    } catch (error) {
-        res.status(500).json({ message: 'Error en el servidor', error });
-    }
-};
-
-module.exports = { register, login, updateUser, deleteUser };

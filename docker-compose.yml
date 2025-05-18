@@ -19,21 +19,14 @@ services:
   microservicio-principal:
     env_file:
       - .env
-    image: ghcr.io/${GHCR_USER}/reserva-restaurante:latest  # ← Aquí va la version
+    build: .
     restart: always
     depends_on:
       - db
       - redis
-    #environment:
-     # DB_TYPE: ${DB_TYPE}
-     # DB_NAME: ${DB_NAME}
-     # DB_USER: ${DB_USER}
-     # DB_PASS: ${DB_PASS}
-     # DB_HOST: ${DB_HOST}
-     # DB_PORT: ${DB_PORT}
-     # REDIS_HOST: ${REDIS_HOST}
-     # REDIS_PORT: ${REDIS_PORT}
-     # SYNC: "true"
+      - mongos
+    ports:
+      - "3000:3000"
     expose:
       - "3000"
     networks:
@@ -47,6 +40,7 @@ services:
       - "${REDIS_PORT}:${REDIS_PORT}"
     networks:
       - app_network
+
   mongocfg1:
     image: mongo:6.0
     container_name: mongocfg1
@@ -54,7 +48,7 @@ services:
     volumes:
       - ./data/mongocfg1:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
   mongocfg2:
     image: mongo:6.0
@@ -63,7 +57,7 @@ services:
     volumes:
       - ./data/mongocfg2:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
   mongocfg3:
     image: mongo:6.0
@@ -72,9 +66,8 @@ services:
     volumes:
       - ./data/mongocfg3:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
-  # Shard 1 Replica Set
   mongors1n1:
     image: mongo:6.0
     container_name: mongors1n1
@@ -82,7 +75,7 @@ services:
     volumes:
       - ./data/mongors1n1:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
   mongors1n2:
     image: mongo:6.0
@@ -91,7 +84,7 @@ services:
     volumes:
       - ./data/mongors1n2:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
   mongors1n3:
     image: mongo:6.0
@@ -100,9 +93,8 @@ services:
     volumes:
       - ./data/mongors1n3:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
-  # Shard 2 Replica Set
   mongors2n1:
     image: mongo:6.0
     container_name: mongors2n1
@@ -110,7 +102,7 @@ services:
     volumes:
       - ./data/mongors2n1:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
   mongors2n2:
     image: mongo:6.0
@@ -119,7 +111,7 @@ services:
     volumes:
       - ./data/mongors2n2:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
   mongors2n3:
     image: mongo:6.0
@@ -128,9 +120,8 @@ services:
     volumes:
       - ./data/mongors2n3:/data/db
     networks:
-      - mongo-cluster
+      - app_network
 
-  # Mongos Router
   mongos:
     image: mongo:6.0
     container_name: mongos
@@ -140,10 +131,9 @@ services:
       - mongocfg3
     ports:
       - "37017:27017"
-    command: >
-      mongos --configdb mongors1conf/mongocfg1:27017,mongocfg2:27017,mongocfg3:27017
+    command: mongos --configdb mongors1conf/mongocfg1:27017,mongocfg2:27017,mongocfg3:27017 --bind_ip_all
     networks:
-      - mongo-cluster
+      - app_network
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
@@ -167,7 +157,6 @@ services:
     networks:
       - app_network
 
-
   microservicio-busqueda:
     build:
       context: ./microservicio-busqueda
@@ -177,7 +166,6 @@ services:
       - app_network
     depends_on:
       - elasticsearch
-
 
   nginx:
     image: nginx:latest
@@ -197,5 +185,3 @@ volumes:
 
 networks:
   app_network:
-  mongo-cluster:
-    driver: bridge

@@ -7,12 +7,12 @@ console.log('DEBUG - DB_MODE =', process.env.DB_MODE);
 switch (process.env.DB_MODE) {
   case 'mongo':
     console.log('[restauranteController] Usando controlador MongoDB');
-    controller = require('./restauranteControllerMongo');
+    controller = require('./restaurantControllerMongo');
     break;
 
   case 'postgres':
     console.log('[restauranteController] Usando controlador PostgreSQL');
-    controller = require('./restauranteControllerPostgres');
+    controller = require('./restaurantControllerPostgres');
     break;
 
   default:

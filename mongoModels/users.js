@@ -1,9 +1,34 @@
-{
-  _id: UUID,
-  name: String,
-  email: String,
-  password: String,
-  role: String, // "client" o "admin"
-  createdAt: Date,
-  updatedAt: Date
-}
+const mongoose = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
+
+const userSchema = new mongoose.Schema({
+  _id: {
+    type: String,
+    default: uuidv4
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true // para evitar emails duplicados
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String,
+    enum: ['client', 'admin'],
+    default: 'client'
+  }
+}, {
+  timestamps: true // crea automáticamente createdAt y updatedAt
+});
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
+
