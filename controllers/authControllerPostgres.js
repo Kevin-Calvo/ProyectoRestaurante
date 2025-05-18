@@ -47,6 +47,22 @@ const deleteUser = async (req, res) => {
     }
 };
 
+const getMe = async (req, res) => {
+    try {
+        const user = await User.findByPk(req.user.id, {
+            attributes: { exclude: ['password'] } // Excluir la contraseña por seguridad
+        });
+
+        if (!user) {
+            return res.status(404).json({ message: 'Usuario no encontrado' });
+        }
+
+        res.json(user);
+    } catch (error) {
+        res.status(500).json({ message: 'Error al obtener usuario', error });
+    }
+};
+
 const register = async (req, res) => {
     try {
         const { name, email, password, role } = req.body;
@@ -96,4 +112,4 @@ const login = async (req, res) => {
     }
 };
 
-module.exports = { register, login, updateUser, deleteUser };
+module.exports = { register, login, updateUser, deleteUser, getMe };

@@ -25,4 +25,5 @@ module.exports = {
   login: controller.login,
   updateUser: controller.updateUser,
   deleteUser: controller.deleteUser,
+  getMe: controller.getMe
 };

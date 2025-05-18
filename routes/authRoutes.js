@@ -1,5 +1,5 @@
 const express = require('express');
-const { register, login, updateUser, deleteUser } = require('../controllers/authController');
+const { register, login, updateUser, deleteUser, getMe } = require('../controllers/authController');
 const authMiddleware = require('../middleware/authMiddleware');
 const adminMiddleware = require('../middleware/adminMiddleware');
 const User = require('../models/User');
@@ -71,21 +71,7 @@ router.post('/login', login);
  *       404:
  *         description: Usuario no encontrado
  */
-router.get('/me', authMiddleware, async (req, res) => {
-    try {
-        const user = await User.findByPk(req.user.id, {
-            attributes: { exclude: ['password'] } // Excluir la contraseña por seguridad
-        });
-
-        if (!user) {
-            return res.status(404).json({ message: 'Usuario no encontrado' });
-        }
-
-        res.json(user);
-    } catch (error) {
-        res.status(500).json({ message: 'Error al obtener usuario', error });
-    }
-});
+router.get('/me', authMiddleware, getMe);
 
 /**
  * @openapi

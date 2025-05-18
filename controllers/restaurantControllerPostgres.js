@@ -1,5 +1,4 @@
 const Restaurant = require('../models/Restaurant');
-const User = require('../models/User');
 
 //  Crear un restaurante (solo administradores)
 exports.createRestaurant = async (req, res) => {
