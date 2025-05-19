@@ -2,6 +2,7 @@ const Order = require('../mongoModels/orders');
 const User = require('../mongoModels/users');
 const Restaurant = require('../mongoModels/restaurants');
 const mongoConnector = require('../config/mongo');
+const { generarClave } = require('../controllers/hashgenerator');
 
 // Crear una nueva orden
 const createOrder = async (req, res) => {
@@ -31,18 +32,23 @@ const createOrder = async (req, res) => {
     }
 };
 
-// Obtener todas las órdenes de un usuario
 const getUserOrders = async (req, res) => {
-    try {
-        await mongoConnector();
+  try {
+    const categoria = 'ordenes';
+    const id = req.user.id;
+    const cacheKey = generarClave(categoria, id);
 
-        const orders = await Order.find({ userId: req.user.id })
-            .populate('restaurantId', 'name'); // Solo traer el nombre del restaurante
+    // 2. Buscar en MongoDB
+    await mongoConnector();
+    const orders = await Order.find({ userId: id })
+      .populate('restaurantId', 'name'); // Solo traer el nombre del restaurante
 
-        res.json(orders);
-    } catch (error) {
-        res.status(500).json({ message: 'Error al obtener las órdenes', error });
-    }
+    console.log('📦 Órdenes desde MongoDB y guardadas en Redis');
+    res.json(orders);
+  } catch (error) {
+    console.error('Error al obtener las órdenes:', error);
+    res.status(500).json({ message: 'Error al obtener las órdenes', error });
+  }
 };
 
 // Cancelar una orden
@@ -63,6 +69,7 @@ const cancelOrder = async (req, res) => {
         }
 
         await order.deleteOne();
+
         res.json({ message: 'Orden cancelada correctamente' });
     } catch (error) {
         res.status(500).json({ message: 'Error al cancelar la orden', error });

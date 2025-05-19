@@ -1,6 +1,8 @@
 const Menu = require('../mongoModels/menus'); // Ajusta la ruta si es necesario
 const Restaurant = require('../mongoModels/restaurants');
 const mongoConnector = require('../config/mongo');
+const { generarClave } = require('../controllers/hashgenerator');
+const redis = require('../config/redis'); 
 
 exports.createMenuItem = async (req, res) => {
   try {
@@ -36,15 +38,25 @@ exports.createMenuItem = async (req, res) => {
 
 exports.getMenuByRestaurant = async (req, res) => {
   try {
-    await mongoConnector();
-
+    const categoria = 'menu';
     const { restaurantId } = req.params;
+    const cacheKey = generarClave(categoria, restaurantId);
 
-    // Buscar todos los platos cuyo restaurantId sea el dado
+    // 1. Buscar en Redis
+    const cacheValue = await redis.get(cacheKey);
+    if (cacheValue) {
+      console.log('Menú desde caché Redis');
+      return res.json(JSON.parse(cacheValue));
+    }
+
+    // 2. Buscar en Mongo
+    await mongoConnector();
     const menu = await Menu.find({ restaurantId });
 
+    console.log('📦 Menú desde MongoDB y guardado en Redis');
     res.json(menu);
   } catch (error) {
+    console.error('Error al obtener el menú:', error);
     res.status(500).json({ message: 'Error al obtener el menú', error });
   }
 };
@@ -73,6 +85,7 @@ exports.updateMenuItem = async (req, res) => {
     if (price) menuItem.price = price;
 
     await menuItem.save();
+
     res.json({ message: 'Plato actualizado', menuItem });
   } catch (error) {
     res.status(500).json({ message: 'Error al actualizar el plato', error });
@@ -94,7 +107,8 @@ exports.deleteMenuItem = async (req, res) => {
       return res.status(404).json({ message: 'Plato no encontrado' });
     }
 
-    await menuItem.deleteOne(); // Método recomendado en Mongoose en lugar de destroy()
+    await menuItem.deleteOne(); 
+
     res.json({ message: 'Plato eliminado correctamente' });
   } catch (error) {
     res.status(500).json({ message: 'Error al eliminar el plato', error });

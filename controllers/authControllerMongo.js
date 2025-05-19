@@ -2,6 +2,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../mongoModels/users');
 const mongoConnector = require('../config/mongo');
+const { generarClave } = require('../controllers/hashgenerator');
+const redis = require('../config/redis'); 
 require('dotenv').config();
 
 const register = async (req, res) => {
@@ -83,6 +85,11 @@ const updateUser = async (req, res) => {
 
     await user.save();
 
+    // === ELIMINAR DE CACHÉ ===
+    const categoria = 'usuario';
+    const cacheKey = generarClave(categoria, req.user.id);
+    await redis.del(cacheKey); 
+
     res.json({ message: 'Usuario actualizado correctamente' });
   } catch (error) {
     console.error('Error en updateUser:', error);
@@ -102,6 +109,11 @@ const deleteUser = async (req, res) => {
 
     await user.deleteOne();
 
+    // === ELIMINAR DE CACHÉ ===
+    const categoria = 'usuario';
+    const cacheKey = generarClave(categoria, req.user.id);
+    await redis.del(cacheKey);
+
     res.json({ message: 'Usuario eliminado correctamente' });
   } catch (error) {
     res.status(500).json({ message: 'Error al eliminar usuario', error });
@@ -109,19 +121,33 @@ const deleteUser = async (req, res) => {
 };
 
 const getMe = async (req, res) => {
-    try {
-        await mongoConnector();
-        
-        const user = await User.findById(req.user.id).select('-password'); // Excluir la contraseña
+  try {
+    const categoria = 'usuario';
+    const id = req.user.id;
+    const cacheKey = generarClave(categoria, id);
 
-        if (!user) {
-            return res.status(404).json({ message: 'Usuario no encontrado' });
-        }
-
-        res.json(user);
-    } catch (error) {
-        res.status(500).json({ message: 'Error al obtener usuario', error });
+    // 1. Buscar en Redis
+    const cacheValue = await redis.get(cacheKey);
+    if (cacheValue) {
+      console.log('Datos desde caché Redis');
+      return res.json(JSON.parse(cacheValue));
     }
+
+    // 2. Buscar en Mongo
+    await mongoConnector();
+    const user = await User.findById(id).select('-password');
+    if (!user) {
+      return res.status(404).json({ message: 'Usuario no encontrado' });
+    }
+
+    // 3. Guardar en Redis
+    await redis.set(cacheKey, JSON.stringify(user), 3600); // 1 hora
+
+    res.json(user);
+  } catch (error) {
+    console.error('Error al obtener usuario:', error);
+    res.status(500).json({ message: 'Error al obtener usuario', error });
+  }
 };
 
 
