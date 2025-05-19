@@ -1,15 +1,19 @@
-const { register, login } = require('../controllers/authControllerMongo');
+const authController = require('../controllers/authControllerMongo');
 const User = require('../mongoModels/users');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+// ✅ Mock externos
 jest.mock('../mongoModels/users');
 jest.mock('bcryptjs');
 jest.mock('jsonwebtoken');
 
+// ✅ Mockeamos la conexión a Mongo para que no se haga de verdad
+jest.mock('../config/mongo', () => jest.fn().mockResolvedValue());
+
 describe('authControllerMongo - register', () => {
   it('debería registrar un usuario correctamente', async () => {
-    User.findOne.mockResolvedValue(null); // no existe
+    User.findOne.mockResolvedValue(null); // Usuario no existe
     bcrypt.hash.mockResolvedValue('hashed_pass');
     User.prototype.save = jest.fn().mockResolvedValue();
 
@@ -27,7 +31,7 @@ describe('authControllerMongo - register', () => {
       json: jest.fn()
     };
 
-    await register(req, res);
+    await authController.register(req, res);
 
     expect(res.status).toHaveBeenCalledWith(201);
     expect(res.json).toHaveBeenCalledWith(expect.objectContaining({
@@ -36,7 +40,7 @@ describe('authControllerMongo - register', () => {
   });
 
   it('debería rechazar si el correo ya existe', async () => {
-    User.findOne.mockResolvedValue({ email: 'test@example.com' }); // ya existe
+    User.findOne.mockResolvedValue({ email: 'test@example.com' });
 
     const req = {
       body: {
@@ -52,7 +56,7 @@ describe('authControllerMongo - register', () => {
       json: jest.fn()
     };
 
-    await register(req, res);
+    await authController.register(req, res);
 
     expect(res.status).toHaveBeenCalledWith(400);
     expect(res.json).toHaveBeenCalledWith({ message: 'El usuario ya existe' });
@@ -83,7 +87,7 @@ describe('authControllerMongo - login', () => {
       json: jest.fn()
     };
 
-    await login(req, res);
+    await authController.login(req, res);
 
     expect(res.json).toHaveBeenCalledWith({ token: 'fake_token' });
   });
@@ -104,7 +108,7 @@ describe('authControllerMongo - login', () => {
       json: jest.fn()
     };
 
-    await login(req, res);
+    await authController.login(req, res);
 
     expect(res.status).toHaveBeenCalledWith(401);
     expect(res.json).toHaveBeenCalledWith({ message: 'Contraseña incorrecta' });

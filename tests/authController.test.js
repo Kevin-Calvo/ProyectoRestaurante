@@ -5,6 +5,7 @@ const User = require('../models/User');
 jest.mock('../models/User');
 
 describe('authController - login', () => {
+  
   it('debería devolver error 404 si el usuario no existe', async () => {
     User.findOne.mockResolvedValue(null);
 
