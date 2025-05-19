@@ -1,10 +1,10 @@
-const { createReservation } = require('../controllers/reservationControllerMongo');
-const Reservation = require('../mongoModels/reservation');
-const Restaurant = require('../mongoModels/restaurants');
+const { createReservation } = require('../../../controllers/reservationControllerMongo');
+const Reservation = require('../../../mongoModels/reservation');
+const Restaurant = require('../../../mongoModels/restaurants');
 
-jest.mock('../mongoModels/reservation');
-jest.mock('../mongoModels/restaurants');
-jest.mock('../config/mongo', () => jest.fn().mockResolvedValue());
+jest.mock('../../../mongoModels/reservation');
+jest.mock('../../../mongoModels/restaurants');
+jest.mock('../../../config/mongo', () => jest.fn().mockResolvedValue());
 
 describe('reservationControllerMongo - createReservation', () => {
   it('debería crear una reserva si el restaurante existe', async () => {

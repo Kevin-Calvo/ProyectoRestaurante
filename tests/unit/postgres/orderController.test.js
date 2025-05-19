@@ -1,9 +1,9 @@
-const { createOrder } = require('../controllers/orderControllerPostgres');
-const Order = require('../models/Order');
-const Restaurant = require('../models/Restaurant');
+const { createOrder } = require('../../../controllers/orderControllerPostgres');
+const Order = require('../../../models/Order');
+const Restaurant = require('../../../models/Restaurant');
 
-jest.mock('../models/Order');
-jest.mock('../models/Restaurant');
+jest.mock('../../../models/Order');
+jest.mock('../../../models/Restaurant');
 
 describe('orderController - createOrder', () => {
   it('debería crear una orden si el restaurante existe', async () => {

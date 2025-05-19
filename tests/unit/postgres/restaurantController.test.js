@@ -1,7 +1,7 @@
-const { getRestaurants } = require('../controllers/restaurantControllerPostgres');
-const Restaurant = require('../models/Restaurant');
+const { getRestaurants } = require('../../../controllers/restaurantControllerPostgres');
+const Restaurant = require('../../../models/Restaurant');
 
-jest.mock('../models/Restaurant');
+jest.mock('../../../models/Restaurant');
 
 describe('getRestaurants', () => {
   it('debería retornar una lista de restaurantes', async () => {

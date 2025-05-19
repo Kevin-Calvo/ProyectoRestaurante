@@ -1,8 +1,8 @@
-const { createRestaurant } = require('../controllers/restaurantControllerMongo');
-const Restaurant = require('../mongoModels/restaurants');
+const { createRestaurant } = require('../../../controllers/restaurantControllerMongo');
+const Restaurant = require('../../../mongoModels/restaurants');
 
-jest.mock('../mongoModels/restaurants');
-jest.mock('../config/mongo', () => jest.fn().mockResolvedValue());
+jest.mock('../../../mongoModels/restaurants');
+jest.mock('../../../config/mongo', () => jest.fn().mockResolvedValue());
 
 describe('restaurantControllerMongo - createRestaurant', () => {
   it('debería registrar un restaurante si el usuario es admin', async () => {

@@ -1,10 +1,10 @@
-const { createOrder } = require('../controllers/orderControllerMongo');
-const Order = require('../mongoModels/orders');
-const Restaurant = require('../mongoModels/restaurants');
+const { createOrder } = require('../../../controllers/orderControllerMongo');
+const Order = require('../../../mongoModels/orders');
+const Restaurant = require('../../../mongoModels/restaurants');
 
-jest.mock('../mongoModels/orders');
-jest.mock('../mongoModels/restaurants');
-jest.mock('../config/mongo', () => jest.fn().mockResolvedValue()); // Mock de conexión Mongo
+jest.mock('../../../mongoModels/orders');
+jest.mock('../../../mongoModels/restaurants');
+jest.mock('../../../config/mongo', () => jest.fn().mockResolvedValue()); // Mock de conexión Mongo
 
 describe('orderControllerMongo - createOrder', () => {
   it('debería crear una orden si el restaurante existe', async () => {

@@ -1,10 +1,10 @@
-const { createMenuItem } = require('../controllers/menuControllerMongo');
-const Menu = require('../mongoModels/menus');
-const Restaurant = require('../mongoModels/restaurants');
+const { createMenuItem } = require('../../../controllers/menuControllerMongo');
+const Menu = require('../../../mongoModels/menus');
+const Restaurant = require('../../../mongoModels/restaurants');
 
-jest.mock('../mongoModels/menus');
-jest.mock('../mongoModels/restaurants');
-jest.mock('../config/mongo', () => jest.fn().mockResolvedValue()); // mock de la conexión
+jest.mock('../../../mongoModels/menus');
+jest.mock('../../../mongoModels/restaurants');
+jest.mock('../../../config/mongo', () => jest.fn().mockResolvedValue()); // mock de la conexión
 
 describe('menuControllerMongo - createMenuItem', () => {
   it('debería agregar un plato si el usuario es admin y el restaurante existe', async () => {

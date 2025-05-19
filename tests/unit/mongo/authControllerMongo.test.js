@@ -1,15 +1,15 @@
-const authController = require('../controllers/authControllerMongo');
-const User = require('../mongoModels/users');
+const authController = require('../../../controllers/authControllerMongo');
+const User = require('../../../mongoModels/users');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 // ✅ Mock externos
-jest.mock('../mongoModels/users');
+jest.mock('../../../mongoModels/users');
 jest.mock('bcryptjs');
 jest.mock('jsonwebtoken');
 
 // ✅ Mockeamos la conexión a Mongo para que no se haga de verdad
-jest.mock('../config/mongo', () => jest.fn().mockResolvedValue());
+jest.mock('../../../config/mongo', () => jest.fn().mockResolvedValue());
 
 describe('authControllerMongo - register', () => {
   it('debería registrar un usuario correctamente', async () => {

@@ -1,8 +1,8 @@
 
-const authController = require('../controllers/authControllerPostgres');
-const User = require('../models/User');
+const authController = require('../../../controllers/authControllerPostgres');
+const User = require('../../../models/User');
 
-jest.mock('../models/User');
+jest.mock('../../../models/User');
 
 describe('authController - login', () => {
   

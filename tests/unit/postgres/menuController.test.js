@@ -1,7 +1,7 @@
-const { getMenuByRestaurant } = require('../controllers/menuControllerPostgres');
-const Menu = require('../models/Menu');
+const { getMenuByRestaurant } = require('../../../controllers/menuControllerPostgres');
+const Menu = require('../../../models/Menu');
 
-jest.mock('../models/Menu');
+jest.mock('../../../models/Menu');
 
 describe('menuController - getMenuByRestaurant', () => {
   it('debería retornar una lista de menús', async () => {
