@@ -21,6 +21,7 @@ switch (process.env.DB_MODE) {
 
 module.exports = {
   createRestaurant: controller.createRestaurant,
+  generate: controller.generate,
   getRestaurants: controller.getRestaurants,
   updateRestaurant: controller.updateRestaurant,
   deleteRestaurant: controller.deleteRestaurant,

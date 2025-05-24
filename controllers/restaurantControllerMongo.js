@@ -1,5 +1,6 @@
 const Restaurant = require('../mongoModels/restaurants');
 const mongoConnector = require('../config/mongo');
+const { faker } = require('@faker-js/faker');
 
 // Crear un restaurante (solo administradores)
 exports.createRestaurant = async (req, res) => {
@@ -23,6 +24,38 @@ exports.createRestaurant = async (req, res) => {
         res.status(201).json({ message: 'Restaurante registrado con éxito', restaurant });
     } catch (error) {
         res.status(500).json({ message: 'Error al registrar el restaurante', error });
+    }
+};
+
+exports.generate = async (req, res) => {
+    try {
+        await mongoConnector();
+
+        if (req.user.role !== 'admin') {
+            return res.status(403).json({ message: 'No autorizado' });
+        }
+
+        const restaurants = [];
+
+        for (let i = 0; i < 20; i++) {
+            restaurants.push({
+                name: faker.company.companyName(),
+                address: faker.address.streetAddress(),
+                owner_id: req.user.id
+            });
+        }
+
+        const created = await Restaurant.insertMany(restaurants);
+
+        res.status(201).json({
+            message: '20 restaurantes registrados con éxito',
+            restaurantes: created
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error al registrar los restaurantes',
+            error
+        });
     }
 };
 

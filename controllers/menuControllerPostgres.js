@@ -23,6 +23,10 @@ exports.createMenuItem = async (req, res) => {
     }
 };
 
+exports.generate = async (req, res) => {
+    res.json({message: "Funcion no valida para esta base de datos"});
+};
+
 //  Obtener el menú de un restaurante
 exports.getMenuByRestaurant = async (req, res) => {
     try {

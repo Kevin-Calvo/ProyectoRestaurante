@@ -1,6 +1,7 @@
 const Menu = require('../mongoModels/menus'); // Ajusta la ruta si es necesario
 const Restaurant = require('../mongoModels/restaurants');
 const mongoConnector = require('../config/mongo');
+const { faker } = require('@faker-js/faker');
 const { generarClave } = require('../controllers/hashgenerator');
 const redis = require('../config/redis'); 
 
@@ -33,6 +34,42 @@ exports.createMenuItem = async (req, res) => {
     res.status(201).json({ message: 'Plato agregado al menú', menuItem });
   } catch (error) {
     res.status(500).json({ message: 'Error al agregar el plato', error });
+  }
+};
+
+exports.generate = async (req, res) => {
+  try {
+    await mongoConnector();
+
+    if (!req.user || req.user.role !== 'admin') {
+      return res.status(403).json({ message: 'No autorizado' });
+    }
+
+    const { restaurantId } = req.body;
+
+    const restaurant = await Restaurant.findById(restaurantId);
+    if (!restaurant) {
+      return res.status(404).json({ message: 'Restaurante no encontrado' });
+    }
+
+    const fakeMenuItems = Array.from({ length: 20 }, () => ({
+      name: faker.commerce.productName(),
+      description: faker.commerce.productDescription(),
+      price: parseFloat(faker.commerce.price(5, 50)),
+      restaurantId: restaurant._id
+    }));
+
+    const insertedItems = await Menu.insertMany(fakeMenuItems);
+
+    res.status(201).json({
+      message: '20 platos generados exitosamente',
+      items: insertedItems
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: 'Error al generar los platos',
+      error: error.message
+    });
   }
 };
 

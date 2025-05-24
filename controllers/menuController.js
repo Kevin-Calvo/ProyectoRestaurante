@@ -22,6 +22,7 @@ switch (process.env.DB_MODE) {
 // Reexporta las funciones del controlador elegido
 module.exports = {
   createMenuItem: controller.createMenuItem,
+  generate: controller.generate,
   getMenuByRestaurant: controller.getMenuByRestaurant,
   updateMenuItem: controller.updateMenuItem,
   deleteMenuItem: controller.deleteMenuItem,

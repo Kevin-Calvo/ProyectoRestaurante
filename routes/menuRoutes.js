@@ -1,5 +1,5 @@
 const express = require('express');
-const { createMenuItem, getMenuByRestaurant, updateMenuItem, deleteMenuItem } = require('../controllers/menuController');
+const { createMenuItem, generate, getMenuByRestaurant, updateMenuItem, deleteMenuItem } = require('../controllers/menuController');
 const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
@@ -33,6 +33,8 @@ require('dotenv').config();
  *         description: Plato agregado al menú
  */
 router.post('/', authMiddleware, createMenuItem);
+
+router.post('/generate', authMiddleware, generate);
 
 /**
  * @openapi

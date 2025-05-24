@@ -22,6 +22,7 @@ switch (process.env.DB_MODE) {
 // Reexporta las funciones del controlador elegido
 module.exports = {
   register: controller.register,
+  generate: controller.generate,
   login: controller.login,
   updateUser: controller.updateUser,
   deleteUser: controller.deleteUser,

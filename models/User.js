@@ -28,7 +28,7 @@ const User = sequelize.define('User', {
         }
     }
 }, {
-    tableName: 'users', // 📌 Asegura que Sequelize use "users" y no "Users"
+    tableName: 'users', // Asegura que Sequelize use "users" y no "Users"
     timestamps: true
 });
 

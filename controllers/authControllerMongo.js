@@ -4,6 +4,7 @@ const User = require('../mongoModels/users');
 const mongoConnector = require('../config/mongo');
 const { generarClave } = require('../controllers/hashgenerator');
 const redis = require('../config/redis'); 
+const { faker } = require('@faker-js/faker');
 require('dotenv').config();
 
 const register = async (req, res) => {
@@ -28,11 +29,41 @@ const register = async (req, res) => {
 
     await user.save();
 
-    res.status(201).json({ message: 'Usuario registrado con éxito', user });
+    res.status(201).json({ message: 'Usuario registrado con éxito'});
   } catch (error) {
     console.error('Error al registrar usuario:', error);
     res.status(500).json({ message: 'Error en el servidor', error });
   }
+};
+const generate = async(req,res) => {
+  try {
+      const users = [];
+
+      // 15 admins
+      for (let i = 0; i < 15; i++) {
+        users.push({
+          name: faker.person.findName(),
+          email: faker.internet.email().toLowerCase(),
+          password: faker.internet.password(10),
+          role: 'admin'
+        });
+      }
+
+      // 45 clients
+      for (let i = 0; i < 45; i++) {
+        users.push({
+          name: faker.person.findName(),
+          email: faker.internet.email().toLowerCase(),
+          password: faker.internet.password(10),
+          role: 'client'
+        });
+      }
+
+      const inserted = await User.insertMany(users);
+      res.status(201).json({ message: `Usuarios generados: ${inserted.length}` });
+    } catch (error) {
+      res.status(500).json({ message: 'Error al generar usuarios', error });
+    }
 };
 
 const login = async (req, res) => {
@@ -151,4 +182,4 @@ const getMe = async (req, res) => {
 };
 
 
-module.exports = { register, login, updateUser, deleteUser, getMe };
+module.exports = { register, generate, login, updateUser, deleteUser, getMe };

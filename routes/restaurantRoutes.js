@@ -1,5 +1,5 @@
 const express = require('express');
-const { createRestaurant, getRestaurants, updateRestaurant, deleteRestaurant } = require('../controllers/restaurantController');
+const { createRestaurant, generate, getRestaurants, updateRestaurant, deleteRestaurant } = require('../controllers/restaurantController');
 const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
@@ -29,6 +29,8 @@ require('dotenv').config();
  *         description: Restaurante creado
  */
 router.post('/', authMiddleware, createRestaurant);
+
+router.post('generate', authMiddleware, generate);
 
 /**
  * @openapi

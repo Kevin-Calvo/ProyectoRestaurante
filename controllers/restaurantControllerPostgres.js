@@ -21,6 +21,10 @@ exports.createRestaurant = async (req, res) => {
     }
 };
 
+exports.generate = async (req, res) => {
+    res.json({message: "Funcion no valida para esta base de datos"});
+};
+
 //  Obtener todos los restaurantes
 exports.getRestaurants = async (req, res) => {
     try {

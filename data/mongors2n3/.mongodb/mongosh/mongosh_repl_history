@@ -1,0 +1,9 @@
+exit
+db.dropDatabase()
+use reserva_restaurante
+exit
+db.dropDatabase()
+use reserva_restaurantes
+exit
+db.dropDatabase()
+use reserva_restaurantes

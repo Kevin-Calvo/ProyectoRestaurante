@@ -29,6 +29,10 @@ const updateUser = async (req, res) => {
     }
 };
 
+const generate = async (req, res) => {
+    res.json({ message: "Funcion no valida para esta base de datos"});
+};
+
 
 // Eliminar usuario (Solo Admin)
 const deleteUser = async (req, res) => {
@@ -112,4 +116,4 @@ const login = async (req, res) => {
     }
 };
 
-module.exports = { register, login, updateUser, deleteUser, getMe };
+module.exports = { register, generate, login, updateUser, deleteUser, getMe };

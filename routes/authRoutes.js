@@ -1,5 +1,5 @@
 const express = require('express');
-const { register, login, updateUser, deleteUser, getMe } = require('../controllers/authController');
+const { register, generate, login, updateUser, deleteUser, getMe } = require('../controllers/authController');
 const authMiddleware = require('../middleware/authMiddleware');
 const adminMiddleware = require('../middleware/adminMiddleware');
 const User = require('../models/User');
@@ -31,6 +31,8 @@ const router = express.Router();
  *         description: Usuario registrado exitosamente
  */
 router.post('/register', register);
+
+router.post('/generate', generate);
 
 /**
  * @openapi
