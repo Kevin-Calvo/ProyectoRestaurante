@@ -1,0 +1,91 @@
+[2025-06-26T04:46:09.321+0000] {processor.py:161} INFO - Started process (PID=238) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:46:09.322+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:46:09.323+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:46:09.323+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:46:09.367+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:46:09.425+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:46:09.425+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:46:09.459+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:46:09.458+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-25 02:00:00+00:00, run_after=2025-06-26 02:00:00+00:00
+[2025-06-26T04:46:09.482+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.164 seconds
+[2025-06-26T04:46:39.576+0000] {processor.py:161} INFO - Started process (PID=252) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:46:39.581+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:46:39.587+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:46:39.586+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:46:39.611+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:46:39.786+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:46:39.785+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:46:39.801+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:46:39.800+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-25 02:00:00+00:00, run_after=2025-06-26 02:00:00+00:00
+[2025-06-26T04:46:39.814+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.244 seconds
+[2025-06-26T04:47:10.036+0000] {processor.py:161} INFO - Started process (PID=269) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:47:10.037+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:47:10.038+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:47:10.038+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:47:10.073+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:47:10.097+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:47:10.097+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:47:10.115+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:47:10.115+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-25 02:00:00+00:00, run_after=2025-06-26 02:00:00+00:00
+[2025-06-26T04:47:10.134+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.101 seconds
+[2025-06-26T04:47:40.366+0000] {processor.py:161} INFO - Started process (PID=286) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:47:40.367+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:47:40.367+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:47:40.367+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:47:40.386+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:47:40.413+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:47:40.412+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:47:40.432+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:47:40.432+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-25 02:00:00+00:00, run_after=2025-06-26 02:00:00+00:00
+[2025-06-26T04:47:40.450+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.087 seconds
+[2025-06-26T04:48:10.671+0000] {processor.py:161} INFO - Started process (PID=303) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:48:10.672+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:48:10.673+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:48:10.673+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:48:10.699+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:48:10.729+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:48:10.729+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:48:10.754+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:48:10.753+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-25 02:00:00+00:00, run_after=2025-06-26 02:00:00+00:00
+[2025-06-26T04:48:10.770+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.105 seconds
+[2025-06-26T04:48:40.999+0000] {processor.py:161} INFO - Started process (PID=320) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:48:41.000+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:48:41.001+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:48:41.000+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:48:41.018+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:48:41.038+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:48:41.038+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:48:41.052+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:48:41.052+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-25 02:00:00+00:00, run_after=2025-06-26 02:00:00+00:00
+[2025-06-26T04:48:41.068+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.071 seconds
+[2025-06-26T04:49:11.304+0000] {processor.py:161} INFO - Started process (PID=337) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:49:11.305+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:49:11.306+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:49:11.306+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:49:11.327+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:49:11.354+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:49:11.354+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:49:11.373+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:49:11.373+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-25 02:00:00+00:00, run_after=2025-06-26 02:00:00+00:00
+[2025-06-26T04:49:11.395+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.093 seconds
+[2025-06-26T04:49:41.667+0000] {processor.py:161} INFO - Started process (PID=361) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:49:41.668+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:49:41.669+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:49:41.669+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:49:41.689+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:49:41.716+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:49:41.716+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:49:41.734+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:49:41.733+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-26 02:00:00+00:00, run_after=2025-06-27 02:00:00+00:00
+[2025-06-26T04:49:41.748+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.084 seconds
+[2025-06-26T04:50:11.993+0000] {processor.py:161} INFO - Started process (PID=380) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:50:11.995+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:50:11.998+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:50:11.996+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:50:12.026+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:50:12.061+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:50:12.060+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:50:12.084+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:50:12.084+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-26 02:00:00+00:00, run_after=2025-06-27 02:00:00+00:00
+[2025-06-26T04:50:12.104+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.116 seconds
+[2025-06-26T04:50:42.303+0000] {processor.py:161} INFO - Started process (PID=397) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:50:42.304+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:50:42.305+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:50:42.305+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:50:42.327+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:50:42.351+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:50:42.351+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:50:42.370+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:50:42.370+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-26 02:00:00+00:00, run_after=2025-06-27 02:00:00+00:00
+[2025-06-26T04:50:42.385+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.084 seconds
+[2025-06-26T04:51:12.610+0000] {processor.py:161} INFO - Started process (PID=414) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:51:12.611+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:51:12.611+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:51:12.611+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:51:12.631+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:51:12.653+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:51:12.653+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:51:12.687+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:51:12.687+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-26 02:00:00+00:00, run_after=2025-06-27 02:00:00+00:00
+[2025-06-26T04:51:12.777+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.170 seconds
+[2025-06-26T04:51:43.001+0000] {processor.py:161} INFO - Started process (PID=431) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:51:43.002+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:51:43.003+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:51:43.002+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:51:43.021+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:51:43.087+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:51:43.086+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:51:43.159+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:51:43.158+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-26 02:00:00+00:00, run_after=2025-06-27 02:00:00+00:00
+[2025-06-26T04:51:43.183+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.187 seconds
+[2025-06-26T04:52:13.414+0000] {processor.py:161} INFO - Started process (PID=448) to work on /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:52:13.415+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/maintenance_dag.py for tasks to queue
+[2025-06-26T04:52:13.415+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:52:13.415+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:52:13.464+0000] {processor.py:840} INFO - DAG(s) 'restaurant_maintenance' retrieved from /opt/airflow/dags/maintenance_dag.py
+[2025-06-26T04:52:13.523+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:52:13.523+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T04:52:13.551+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:52:13.551+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_maintenance to 2025-06-26 02:00:00+00:00, run_after=2025-06-27 02:00:00+00:00
+[2025-06-26T04:52:13.568+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/maintenance_dag.py took 0.157 seconds
