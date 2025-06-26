@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # Base de datos PostgreSQL para almacenar datos del restaurante
+  postgres:
+    image: postgres:15
+    container_name: restaurant_postgres
+    environment:
+      POSTGRES_DB: restaurant_db
+      POSTGRES_USER: restaurant_user
+      POSTGRES_PASSWORD: restaurant_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./01-restaurant-data.sql:/docker-entrypoint-initdb.d/01-restaurant-data.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - restaurant_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U restaurant_user -d restaurant_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Base de datos PostgreSQL para Metabase (metadata)
+  metabase_postgres:
+    image: postgres:15
+    container_name: metabase_postgres
+    environment:
+      POSTGRES_DB: metabase
+      POSTGRES_USER: metabase_user
+      POSTGRES_PASSWORD: metabase_pass
+    volumes:
+      - metabase_postgres_data:/var/lib/postgresql/data
+    networks:
+      - restaurant_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U metabase_user -d metabase"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Metabase para visualización
+  metabase:
+    image: metabase/metabase:latest
+    container_name: restaurant_metabase
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase_user
+      MB_DB_PASS: metabase_pass
+      MB_DB_HOST: metabase_postgres
+      JAVA_OPTS: "-Xmx1g"
+    ports:
+      - "3000:3000"
+    depends_on:
+      metabase_postgres:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    networks:
+      - restaurant_network
+    volumes:
+      - metabase_data:/metabase-data
+
+  # Spark para procesamiento de datos
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile.spark
+    container_name: spark_analytics
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - restaurant_network
+    volumes:
+      - ./:/app
+      - spark_output:/tmp/spark_restaurant_analysis
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_HOST=spark
+      - PYSPARK_PYTHON=python3
+      - PYSPARK_DRIVER_PYTHON=python3
+      
+volumes:
+  postgres_data:
+  metabase_data:
+  metabase_postgres_data:
+  spark_output:
+
+networks:
+  restaurant_network:
+    driver: bridge

@@ -78,3 +78,6 @@ En resumen, JWT asegura que solo usuarios con identidad verificada accedan a las
 ## Créditos
 
 Proyecto desarrollado por **Samuel Duran, Cristhian Rivas, Kevin Calvo y Alana Calvo** como parte de una entrega académica al Tecnológico de Costa Rica. ¡Gracias por revisar este repositorio!
+
+cristhiandaniel3006@gmail.com
+proyecto2

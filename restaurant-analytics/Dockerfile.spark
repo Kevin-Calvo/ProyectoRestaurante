@@ -1,0 +1,33 @@
+FROM bitnami/spark:3.5.1
+
+USER root
+
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    wget \
+    postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
+
+# Descargar el conector JDBC de PostgreSQL para Spark
+RUN wget https://jdbc.postgresql.org/download/postgresql-42.7.3.jar -P /opt/bitnami/spark/jars/
+
+# Copiar requirements y instalar dependencias Python
+COPY requirements.txt /tmp/requirements.txt
+RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
+
+# Crear directorio de trabajo
+WORKDIR /app
+
+# Configurar variables de entorno
+ENV PYSPARK_PYTHON=python3
+ENV PYSPARK_DRIVER_PYTHON=python3
+ENV SPARK_HOME=/opt/bitnami/spark
+ENV PATH=$PATH:$SPARK_HOME/bin
+
+# Copiar el script de análisis
+COPY analisis_restaurantes_spark.py /app/analisis_restaurantes_spark.py
+
+# Comando por defecto
+CMD ["python3", "/app/analisis_restaurantes_spark.py"]
