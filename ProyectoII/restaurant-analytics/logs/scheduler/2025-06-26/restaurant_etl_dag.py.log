@@ -83,3 +83,45 @@
 [2025-06-26T04:52:18.755+0000] {processor.py:840} INFO - DAG(s) 'restaurant_etl_pipeline' retrieved from /opt/airflow/dags/restaurant_etl_dag.py
 [2025-06-26T04:52:18.776+0000] {logging_mixin.py:188} INFO - [2025-06-26T04:52:18.776+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-06-26T04:52:18.809+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/restaurant_etl_dag.py took 0.282 seconds
+[2025-06-26T19:34:13.496+0000] {processor.py:161} INFO - Started process (PID=238) to work on /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:34:13.498+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/restaurant_etl_dag.py for tasks to queue
+[2025-06-26T19:34:13.500+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:34:13.499+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:34:14.809+0000] {processor.py:840} INFO - DAG(s) 'restaurant_etl_pipeline' retrieved from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:34:14.843+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:34:14.842+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T19:34:14.869+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:34:14.869+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_etl_pipeline to 2025-06-25 00:00:00+00:00, run_after=2025-06-25 06:00:00+00:00
+[2025-06-26T19:34:14.892+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/restaurant_etl_dag.py took 1.401 seconds
+[2025-06-26T19:34:45.356+0000] {processor.py:161} INFO - Started process (PID=257) to work on /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:34:45.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/restaurant_etl_dag.py for tasks to queue
+[2025-06-26T19:34:45.361+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:34:45.361+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:34:45.747+0000] {processor.py:840} INFO - DAG(s) 'restaurant_etl_pipeline' retrieved from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:34:45.886+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:34:45.885+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T19:34:45.907+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:34:45.907+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_etl_pipeline to 2025-06-25 00:00:00+00:00, run_after=2025-06-25 06:00:00+00:00
+[2025-06-26T19:34:45.928+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/restaurant_etl_dag.py took 0.582 seconds
+[2025-06-26T19:35:16.433+0000] {processor.py:161} INFO - Started process (PID=274) to work on /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:35:16.434+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/restaurant_etl_dag.py for tasks to queue
+[2025-06-26T19:35:16.436+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:35:16.435+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:35:16.789+0000] {processor.py:840} INFO - DAG(s) 'restaurant_etl_pipeline' retrieved from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:35:16.831+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:35:16.830+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T19:35:16.859+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:35:16.858+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_etl_pipeline to 2025-06-25 00:00:00+00:00, run_after=2025-06-25 06:00:00+00:00
+[2025-06-26T19:35:16.881+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/restaurant_etl_dag.py took 0.453 seconds
+[2025-06-26T19:35:47.103+0000] {processor.py:161} INFO - Started process (PID=291) to work on /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:35:47.105+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/restaurant_etl_dag.py for tasks to queue
+[2025-06-26T19:35:47.107+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:35:47.106+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:35:47.375+0000] {processor.py:840} INFO - DAG(s) 'restaurant_etl_pipeline' retrieved from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:35:47.405+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:35:47.405+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T19:35:47.427+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:35:47.427+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_etl_pipeline to 2025-06-25 00:00:00+00:00, run_after=2025-06-25 06:00:00+00:00
+[2025-06-26T19:35:47.457+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/restaurant_etl_dag.py took 0.359 seconds
+[2025-06-26T19:36:17.523+0000] {processor.py:161} INFO - Started process (PID=308) to work on /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:36:17.524+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/restaurant_etl_dag.py for tasks to queue
+[2025-06-26T19:36:17.525+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:36:17.524+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:36:17.800+0000] {processor.py:840} INFO - DAG(s) 'restaurant_etl_pipeline' retrieved from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:36:17.833+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:36:17.833+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T19:36:17.855+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:36:17.855+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_etl_pipeline to 2025-06-25 00:00:00+00:00, run_after=2025-06-25 06:00:00+00:00
+[2025-06-26T19:36:17.875+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/restaurant_etl_dag.py took 0.355 seconds
+[2025-06-26T19:36:48.729+0000] {processor.py:161} INFO - Started process (PID=325) to work on /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:36:48.730+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/restaurant_etl_dag.py for tasks to queue
+[2025-06-26T19:36:48.730+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:36:48.730+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:36:48.999+0000] {processor.py:840} INFO - DAG(s) 'restaurant_etl_pipeline' retrieved from /opt/airflow/dags/restaurant_etl_dag.py
+[2025-06-26T19:36:49.028+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:36:49.027+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-06-26T19:36:49.048+0000] {logging_mixin.py:188} INFO - [2025-06-26T19:36:49.048+0000] {dag.py:3823} INFO - Setting next_dagrun for restaurant_etl_pipeline to 2025-06-25 00:00:00+00:00, run_after=2025-06-25 06:00:00+00:00
+[2025-06-26T19:36:49.085+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/restaurant_etl_dag.py took 0.359 seconds
