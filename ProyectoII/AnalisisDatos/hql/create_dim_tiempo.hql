@@ -3,7 +3,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS dim_tiempo (
   dia INT,
   mes STRING,
   trimestre INT,
-  año INT
+  year INT
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
