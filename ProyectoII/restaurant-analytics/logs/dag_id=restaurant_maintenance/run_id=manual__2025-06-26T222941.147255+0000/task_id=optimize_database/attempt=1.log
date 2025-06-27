@@ -1,0 +1,34 @@
+[2025-06-26T22:39:43.807+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_maintenance.optimize_database manual__2025-06-26T22:29:41.147255+00:00 [queued]>
+[2025-06-26T22:39:43.818+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_maintenance.optimize_database manual__2025-06-26T22:29:41.147255+00:00 [queued]>
+[2025-06-26T22:39:43.819+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-06-26T22:39:43.834+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): optimize_database> on 2025-06-26 22:29:41.147255+00:00
+[2025-06-26T22:39:43.883+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_maintenance', 'optimize_database', 'manual__2025-06-26T22:29:41.147255+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/maintenance_dag.py', '--cfg-path', '/tmp/tmpmh_npqeu']
+[2025-06-26T22:39:43.915+0000] {standard_task_runner.py:88} INFO - Job 73: Subtask optimize_database
+[2025-06-26T22:39:43.849+0000] {standard_task_runner.py:60} INFO - Started process 418 to run task
+[2025-06-26T22:39:44.232+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_maintenance.optimize_database manual__2025-06-26T22:29:41.147255+00:00 [running]> on host d3028e9b49fd
+[2025-06-26T22:39:44.721+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-admin' AIRFLOW_CTX_DAG_ID='restaurant_maintenance' AIRFLOW_CTX_TASK_ID='optimize_database' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T22:29:41.147255+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-26T22:29:41.147255+00:00'
+[2025-06-26T22:39:44.735+0000] {maintenance_dag.py:169} INFO - ⚡ Optimizando base de datos...
+[2025-06-26T22:39:44.778+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: pedidos
+[2025-06-26T22:39:44.782+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: detalle_pedidos
+[2025-06-26T22:39:44.786+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: productos
+[2025-06-26T22:39:44.788+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: clientes
+[2025-06-26T22:39:44.792+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: reservas
+[2025-06-26T22:39:44.793+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: categorias
+[2025-06-26T22:39:44.821+0000] {maintenance_dag.py:205} INFO - 📊 Tamaños de tablas:
+[2025-06-26T22:39:44.822+0000] {maintenance_dag.py:207} INFO -    pedidos: 72 kB
+[2025-06-26T22:39:44.822+0000] {maintenance_dag.py:207} INFO -    reservas: 64 kB
+[2025-06-26T22:39:44.823+0000] {maintenance_dag.py:207} INFO -    clientes: 56 kB
+[2025-06-26T22:39:44.823+0000] {maintenance_dag.py:207} INFO -    detalle_pedidos: 56 kB
+[2025-06-26T22:39:44.823+0000] {maintenance_dag.py:207} INFO -    productos: 32 kB
+[2025-06-26T22:39:44.824+0000] {maintenance_dag.py:207} INFO -    categorias: 32 kB
+[2025-06-26T22:39:44.824+0000] {maintenance_dag.py:207} INFO -    backup_vista_estadisticas_pedidos_20250626_223656: 16 kB
+[2025-06-26T22:39:44.825+0000] {maintenance_dag.py:207} INFO -    vista_olap_ingresos_categoria: 16 kB
+[2025-06-26T22:39:44.825+0000] {maintenance_dag.py:207} INFO -    vista_olap_actividad_zona: 16 kB
+[2025-06-26T22:39:44.825+0000] {maintenance_dag.py:207} INFO -    vista_olap_estadisticas_pedidos: 16 kB
+[2025-06-26T22:39:44.826+0000] {maintenance_dag.py:207} INFO -    backup_vista_ingresos_mes_categoria_20250626_223656: 16 kB
+[2025-06-26T22:39:44.826+0000] {maintenance_dag.py:207} INFO -    backup_vista_actividad_clientes_zona_20250626_223656: 16 kB
+[2025-06-26T22:39:44.836+0000] {maintenance_dag.py:213} INFO - ✅ Optimización de base de datos completada
+[2025-06-26T22:39:44.837+0000] {python.py:201} INFO - Done. Returned value was: {'status': 'success', 'tables_analyzed': 6, 'table_sizes': [('pedidos', '72 kB'), ('reservas', '64 kB'), ('clientes', '56 kB'), ('detalle_pedidos', '56 kB'), ('productos', '32 kB'), ('categorias', '32 kB'), ('backup_vista_estadisticas_pedidos_20250626_223656', '16 kB'), ('vista_olap_ingresos_categoria', '16 kB'), ('vista_olap_actividad_zona', '16 kB'), ('vista_olap_estadisticas_pedidos', '16 kB'), ('backup_vista_ingresos_mes_categoria_20250626_223656', '16 kB'), ('backup_vista_actividad_clientes_zona_20250626_223656', '16 kB')]}
+[2025-06-26T22:39:44.917+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_maintenance, task_id=optimize_database, execution_date=20250626T222941, start_date=20250626T223943, end_date=20250626T223944
+[2025-06-26T22:39:44.954+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-26T22:39:44.977+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

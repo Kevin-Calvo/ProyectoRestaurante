@@ -1,0 +1,18 @@
+[2025-06-26T22:26:03.371+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.check_data_quality manual__2025-06-26T22:26:02.656132+00:00 [queued]>
+[2025-06-26T22:26:03.378+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.check_data_quality manual__2025-06-26T22:26:02.656132+00:00 [queued]>
+[2025-06-26T22:26:03.379+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2025-06-26T22:26:03.389+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): check_data_quality> on 2025-06-26 22:26:02.656132+00:00
+[2025-06-26T22:26:03.394+0000] {standard_task_runner.py:60} INFO - Started process 389 to run task
+[2025-06-26T22:26:03.397+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_etl_pipeline', 'check_data_quality', 'manual__2025-06-26T22:26:02.656132+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/restaurant_etl_dag.py', '--cfg-path', '/tmp/tmpusvvg5jz']
+[2025-06-26T22:26:03.399+0000] {standard_task_runner.py:88} INFO - Job 57: Subtask check_data_quality
+[2025-06-26T22:26:03.441+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_etl_pipeline.check_data_quality manual__2025-06-26T22:26:02.656132+00:00 [running]> on host d3028e9b49fd
+[2025-06-26T22:26:03.508+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-analytics' AIRFLOW_CTX_DAG_ID='restaurant_etl_pipeline' AIRFLOW_CTX_TASK_ID='check_data_quality' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T22:26:02.656132+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-26T22:26:02.656132+00:00'
+[2025-06-26T22:26:03.509+0000] {restaurant_etl_dag.py:41} INFO - 🔍 Verificando calidad de datos...
+[2025-06-26T22:26:03.514+0000] {restaurant_etl_dag.py:64} INFO - 📊 Pedidos recientes (24h): 0
+[2025-06-26T22:26:03.516+0000] {restaurant_etl_dag.py:79} INFO - ✅ Integridad: Detalles=41, Pedidos=18, Productos=18
+[2025-06-26T22:26:03.517+0000] {restaurant_etl_dag.py:89} INFO - 👥 Clientes: Total=15, Zonas=6
+[2025-06-26T22:26:03.517+0000] {restaurant_etl_dag.py:94} INFO - ✅ Verificación de calidad completada exitosamente
+[2025-06-26T22:26:03.518+0000] {python.py:201} INFO - Done. Returned value was: {'recent_orders': 0, 'integrity_check': (41, 18, 18), 'client_data': (15, 6), 'status': 'success'}
+[2025-06-26T22:26:03.536+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_etl_pipeline, task_id=check_data_quality, execution_date=20250626T222602, start_date=20250626T222603, end_date=20250626T222603
+[2025-06-26T22:26:03.570+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-26T22:26:03.592+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,24 @@
+[2025-06-27T02:06:36.616+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_maintenance.generate_daily_report scheduled__2025-06-26T02:00:00+00:00 [queued]>
+[2025-06-27T02:06:36.623+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_maintenance.generate_daily_report scheduled__2025-06-26T02:00:00+00:00 [queued]>
+[2025-06-27T02:06:36.623+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-06-27T02:06:36.633+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): generate_daily_report> on 2025-06-26 02:00:00+00:00
+[2025-06-27T02:06:36.639+0000] {standard_task_runner.py:60} INFO - Started process 3956 to run task
+[2025-06-27T02:06:36.641+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_maintenance', 'generate_daily_report', 'scheduled__2025-06-26T02:00:00+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/maintenance_dag.py', '--cfg-path', '/tmp/tmpkvum34q_']
+[2025-06-27T02:06:36.643+0000] {standard_task_runner.py:88} INFO - Job 96: Subtask generate_daily_report
+[2025-06-27T02:06:36.702+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_maintenance.generate_daily_report scheduled__2025-06-26T02:00:00+00:00 [running]> on host d3028e9b49fd
+[2025-06-27T02:06:36.765+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-admin' AIRFLOW_CTX_DAG_ID='restaurant_maintenance' AIRFLOW_CTX_TASK_ID='generate_daily_report' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-26T02:00:00+00:00'
+[2025-06-27T02:06:36.766+0000] {maintenance_dag.py:326} INFO - 📊 Generando reporte diario...
+[2025-06-27T02:06:36.776+0000] {maintenance_dag.py:413} INFO - 📈 REPORTE DIARIO GENERADO
+[2025-06-27T02:06:36.776+0000] {maintenance_dag.py:414} INFO - ==================================================
+[2025-06-27T02:06:36.778+0000] {maintenance_dag.py:415} INFO - 📅 Fecha: 2025-06-26 00:00:00
+[2025-06-27T02:06:36.806+0000] {maintenance_dag.py:416} INFO - 📊 Pedidos totales: 0
+[2025-06-27T02:06:36.812+0000] {maintenance_dag.py:417} INFO - ✅ Pedidos completados: 0
+[2025-06-27T02:06:36.813+0000] {maintenance_dag.py:418} INFO - ❌ Pedidos cancelados: 0
+[2025-06-27T02:06:36.813+0000] {maintenance_dag.py:419} INFO - 💰 Ingresos del día: $0.00
+[2025-06-27T02:06:36.813+0000] {maintenance_dag.py:420} INFO - 👥 Clientes activos: 0
+[2025-06-27T02:06:36.814+0000] {maintenance_dag.py:421} INFO - 🎫 Ticket promedio: $0.00
+[2025-06-27T02:06:36.814+0000] {maintenance_dag.py:433} INFO - ==================================================
+[2025-06-27T02:06:36.814+0000] {python.py:201} INFO - Done. Returned value was: {'fecha': '2025-06-26 00:00:00', 'pedidos_totales': 0, 'pedidos_completados': 0, 'pedidos_cancelados': 0, 'ingresos_dia': 0, 'clientes_activos': 0, 'ticket_promedio': 0, 'productos_top': [], 'actividad_por_zona': []}
+[2025-06-27T02:06:36.834+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_maintenance, task_id=generate_daily_report, execution_date=20250626T020000, start_date=20250627T020636, end_date=20250627T020636
+[2025-06-27T02:06:36.854+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-27T02:06:36.870+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

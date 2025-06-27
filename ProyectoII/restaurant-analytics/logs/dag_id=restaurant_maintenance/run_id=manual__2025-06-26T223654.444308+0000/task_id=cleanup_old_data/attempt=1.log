@@ -1,0 +1,17 @@
+[2025-06-26T22:36:56.243+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_maintenance.cleanup_old_data manual__2025-06-26T22:36:54.444308+00:00 [queued]>
+[2025-06-26T22:36:56.249+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_maintenance.cleanup_old_data manual__2025-06-26T22:36:54.444308+00:00 [queued]>
+[2025-06-26T22:36:56.249+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-06-26T22:36:56.259+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): cleanup_old_data> on 2025-06-26 22:36:54.444308+00:00
+[2025-06-26T22:36:56.263+0000] {standard_task_runner.py:60} INFO - Started process 317 to run task
+[2025-06-26T22:36:56.266+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_maintenance', 'cleanup_old_data', 'manual__2025-06-26T22:36:54.444308+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/maintenance_dag.py', '--cfg-path', '/tmp/tmpyi7hqots']
+[2025-06-26T22:36:56.269+0000] {standard_task_runner.py:88} INFO - Job 68: Subtask cleanup_old_data
+[2025-06-26T22:36:56.312+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_maintenance.cleanup_old_data manual__2025-06-26T22:36:54.444308+00:00 [running]> on host d3028e9b49fd
+[2025-06-26T22:36:56.371+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-admin' AIRFLOW_CTX_DAG_ID='restaurant_maintenance' AIRFLOW_CTX_TASK_ID='cleanup_old_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T22:36:54.444308+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-26T22:36:54.444308+00:00'
+[2025-06-26T22:36:56.372+0000] {maintenance_dag.py:121} INFO - 🧹 Limpiando datos antiguos...
+[2025-06-26T22:36:56.382+0000] {maintenance_dag.py:145} INFO - 📦 Pedidos archivados: 3
+[2025-06-26T22:36:56.383+0000] {maintenance_dag.py:158} INFO - ✅ Limpieza de datos completada
+[2025-06-26T22:36:56.383+0000] {maintenance_dag.py:159} INFO -    Pedidos archivados: 3
+[2025-06-26T22:36:56.384+0000] {python.py:201} INFO - Done. Returned value was: {'status': 'success', 'cleanup_stats': {'logs_cleaned': 0, 'temp_files_removed': 0, 'archived_orders': 3}}
+[2025-06-26T22:36:56.401+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_maintenance, task_id=cleanup_old_data, execution_date=20250626T223654, start_date=20250626T223656, end_date=20250626T223656
+[2025-06-26T22:36:56.440+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-26T22:36:56.461+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,23 @@
+[2025-06-27T00:00:03.732+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.extract_data_postgres scheduled__2025-06-26T18:00:00+00:00 [queued]>
+[2025-06-27T00:00:03.738+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.extract_data_postgres scheduled__2025-06-26T18:00:00+00:00 [queued]>
+[2025-06-27T00:00:03.739+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2025-06-27T00:00:03.747+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): extract_data_postgres> on 2025-06-26 18:00:00+00:00
+[2025-06-27T00:00:03.753+0000] {standard_task_runner.py:60} INFO - Started process 2943 to run task
+[2025-06-27T00:00:03.755+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_etl_pipeline', 'extract_data_postgres', 'scheduled__2025-06-26T18:00:00+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/restaurant_etl_dag.py', '--cfg-path', '/tmp/tmpb6x6ha0l']
+[2025-06-27T00:00:03.756+0000] {standard_task_runner.py:88} INFO - Job 86: Subtask extract_data_postgres
+[2025-06-27T00:00:03.793+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_etl_pipeline.extract_data_postgres scheduled__2025-06-26T18:00:00+00:00 [running]> on host d3028e9b49fd
+[2025-06-27T00:00:03.849+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-analytics' AIRFLOW_CTX_DAG_ID='restaurant_etl_pipeline' AIRFLOW_CTX_TASK_ID='extract_data_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-26T18:00:00+00:00'
+[2025-06-27T00:00:03.850+0000] {restaurant_etl_dag.py:109} INFO - 📤 Extrayendo datos de PostgreSQL...
+[2025-06-27T00:00:03.855+0000] {restaurant_etl_dag.py:140} INFO - 📊 Datos mensuales extraídos: 0 registros
+[2025-06-27T00:00:03.857+0000] {restaurant_etl_dag.py:155} INFO - 🍽️ Productos por categoría:
+[2025-06-27T00:00:03.857+0000] {restaurant_etl_dag.py:157} INFO -    Platos Principales: 5 productos
+[2025-06-27T00:00:03.858+0000] {restaurant_etl_dag.py:157} INFO -    Postres: 3 productos
+[2025-06-27T00:00:03.858+0000] {restaurant_etl_dag.py:157} INFO -    Bebidas: 3 productos
+[2025-06-27T00:00:03.859+0000] {restaurant_etl_dag.py:157} INFO -    Entradas: 3 productos
+[2025-06-27T00:00:03.859+0000] {restaurant_etl_dag.py:157} INFO -    Especiales: 2 productos
+[2025-06-27T00:00:03.859+0000] {restaurant_etl_dag.py:157} INFO -    Ensaladas: 2 productos
+[2025-06-27T00:00:03.859+0000] {restaurant_etl_dag.py:162} INFO - ✅ Extracción de datos completada exitosamente
+[2025-06-27T00:00:03.860+0000] {python.py:201} INFO - Done. Returned value was: {'monthly_summary': [], 'products_by_category': [('Platos Principales', 5), ('Postres', 3), ('Bebidas', 3), ('Entradas', 3), ('Especiales', 2), ('Ensaladas', 2)], 'extraction_timestamp': '2025-06-27T00:00:03.860309', 'status': 'success'}
+[2025-06-27T00:00:03.875+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_etl_pipeline, task_id=extract_data_postgres, execution_date=20250626T180000, start_date=20250627T000003, end_date=20250627T000003
+[2025-06-27T00:00:03.887+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-27T00:00:03.905+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

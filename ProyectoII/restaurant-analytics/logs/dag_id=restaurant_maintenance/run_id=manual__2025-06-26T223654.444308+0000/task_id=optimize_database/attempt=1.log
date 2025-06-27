@@ -1,0 +1,31 @@
+[2025-06-26T22:36:56.243+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_maintenance.optimize_database manual__2025-06-26T22:36:54.444308+00:00 [queued]>
+[2025-06-26T22:36:56.249+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_maintenance.optimize_database manual__2025-06-26T22:36:54.444308+00:00 [queued]>
+[2025-06-26T22:36:56.249+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-06-26T22:36:56.258+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): optimize_database> on 2025-06-26 22:36:54.444308+00:00
+[2025-06-26T22:36:56.263+0000] {standard_task_runner.py:60} INFO - Started process 318 to run task
+[2025-06-26T22:36:56.268+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_maintenance', 'optimize_database', 'manual__2025-06-26T22:36:54.444308+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/maintenance_dag.py', '--cfg-path', '/tmp/tmps_p1gvy0']
+[2025-06-26T22:36:56.269+0000] {standard_task_runner.py:88} INFO - Job 67: Subtask optimize_database
+[2025-06-26T22:36:56.312+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_maintenance.optimize_database manual__2025-06-26T22:36:54.444308+00:00 [running]> on host d3028e9b49fd
+[2025-06-26T22:36:56.371+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-admin' AIRFLOW_CTX_DAG_ID='restaurant_maintenance' AIRFLOW_CTX_TASK_ID='optimize_database' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T22:36:54.444308+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-26T22:36:54.444308+00:00'
+[2025-06-26T22:36:56.372+0000] {maintenance_dag.py:169} INFO - ⚡ Optimizando base de datos...
+[2025-06-26T22:36:56.377+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: pedidos
+[2025-06-26T22:36:56.378+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: detalle_pedidos
+[2025-06-26T22:36:56.379+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: productos
+[2025-06-26T22:36:56.380+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: clientes
+[2025-06-26T22:36:56.381+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: reservas
+[2025-06-26T22:36:56.382+0000] {maintenance_dag.py:192} INFO -    📊 Analizando tabla: categorias
+[2025-06-26T22:36:56.394+0000] {maintenance_dag.py:205} INFO - 📊 Tamaños de tablas:
+[2025-06-26T22:36:56.394+0000] {maintenance_dag.py:207} INFO -    pedidos: 72 kB
+[2025-06-26T22:36:56.395+0000] {maintenance_dag.py:207} INFO -    reservas: 64 kB
+[2025-06-26T22:36:56.395+0000] {maintenance_dag.py:207} INFO -    detalle_pedidos: 56 kB
+[2025-06-26T22:36:56.395+0000] {maintenance_dag.py:207} INFO -    clientes: 56 kB
+[2025-06-26T22:36:56.396+0000] {maintenance_dag.py:207} INFO -    categorias: 32 kB
+[2025-06-26T22:36:56.396+0000] {maintenance_dag.py:207} INFO -    productos: 32 kB
+[2025-06-26T22:36:56.396+0000] {maintenance_dag.py:207} INFO -    vista_olap_ingresos_categoria: 16 kB
+[2025-06-26T22:36:56.396+0000] {maintenance_dag.py:207} INFO -    vista_olap_actividad_zona: 16 kB
+[2025-06-26T22:36:56.397+0000] {maintenance_dag.py:207} INFO -    vista_olap_estadisticas_pedidos: 16 kB
+[2025-06-26T22:36:56.400+0000] {maintenance_dag.py:213} INFO - ✅ Optimización de base de datos completada
+[2025-06-26T22:36:56.400+0000] {python.py:201} INFO - Done. Returned value was: {'status': 'success', 'tables_analyzed': 6, 'table_sizes': [('pedidos', '72 kB'), ('reservas', '64 kB'), ('detalle_pedidos', '56 kB'), ('clientes', '56 kB'), ('categorias', '32 kB'), ('productos', '32 kB'), ('vista_olap_ingresos_categoria', '16 kB'), ('vista_olap_actividad_zona', '16 kB'), ('vista_olap_estadisticas_pedidos', '16 kB')]}
+[2025-06-26T22:36:56.418+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_maintenance, task_id=optimize_database, execution_date=20250626T223654, start_date=20250626T223656, end_date=20250626T223656
+[2025-06-26T22:36:56.440+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-26T22:36:56.472+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

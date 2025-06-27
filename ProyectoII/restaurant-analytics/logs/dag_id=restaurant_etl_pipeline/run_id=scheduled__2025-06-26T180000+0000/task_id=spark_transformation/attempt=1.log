@@ -1,0 +1,18 @@
+[2025-06-27T00:00:05.247+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.spark_transformation scheduled__2025-06-26T18:00:00+00:00 [queued]>
+[2025-06-27T00:00:05.257+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.spark_transformation scheduled__2025-06-26T18:00:00+00:00 [queued]>
+[2025-06-27T00:00:05.258+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2025-06-27T00:00:05.268+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): spark_transformation> on 2025-06-26 18:00:00+00:00
+[2025-06-27T00:00:05.273+0000] {standard_task_runner.py:60} INFO - Started process 2955 to run task
+[2025-06-27T00:00:05.275+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_etl_pipeline', 'spark_transformation', 'scheduled__2025-06-26T18:00:00+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/restaurant_etl_dag.py', '--cfg-path', '/tmp/tmpz85jhb6b']
+[2025-06-27T00:00:05.276+0000] {standard_task_runner.py:88} INFO - Job 89: Subtask spark_transformation
+[2025-06-27T00:00:05.316+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_etl_pipeline.spark_transformation scheduled__2025-06-26T18:00:00+00:00 [running]> on host d3028e9b49fd
+[2025-06-27T00:00:05.383+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-analytics' AIRFLOW_CTX_DAG_ID='restaurant_etl_pipeline' AIRFLOW_CTX_TASK_ID='spark_transformation' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-26T18:00:00+00:00'
+[2025-06-27T00:00:05.384+0000] {restaurant_etl_dag.py:277} INFO - ⚡ Ejecutando procesamiento con Spark...
+[2025-06-27T00:00:05.385+0000] {restaurant_etl_dag.py:283} INFO - 🔄 Iniciando análisis OLAP con Spark...
+[2025-06-27T00:00:15.384+0000] {restaurant_etl_dag.py:286} INFO - 📊 Procesando esquema estrella...
+[2025-06-27T00:00:20.385+0000] {restaurant_etl_dag.py:289} INFO - 🏗️ Creando tablas de hechos y dimensiones...
+[2025-06-27T00:00:25.386+0000] {restaurant_etl_dag.py:292} INFO - ✅ Procesamiento Spark completado exitosamente
+[2025-06-27T00:00:25.386+0000] {python.py:201} INFO - Done. Returned value was: {'status': 'success', 'processing_time': '20 segundos', 'tables_created': ['fact_ventas', 'dim_tiempo', 'dim_producto', 'dim_cliente']}
+[2025-06-27T00:00:25.402+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_etl_pipeline, task_id=spark_transformation, execution_date=20250626T180000, start_date=20250627T000005, end_date=20250627T000025
+[2025-06-27T00:00:25.431+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-27T00:00:25.449+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

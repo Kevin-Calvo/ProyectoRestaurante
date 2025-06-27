@@ -1,0 +1,23 @@
+[2025-06-26T23:31:18.115+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.reindex_products_elasticsearch manual__2025-06-26T23:31:08.740234+00:00 [queued]>
+[2025-06-26T23:31:18.122+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.reindex_products_elasticsearch manual__2025-06-26T23:31:08.740234+00:00 [queued]>
+[2025-06-26T23:31:18.123+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2025-06-26T23:31:18.132+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): reindex_products_elasticsearch> on 2025-06-26 23:31:08.740234+00:00
+[2025-06-26T23:31:18.138+0000] {standard_task_runner.py:60} INFO - Started process 2095 to run task
+[2025-06-26T23:31:18.140+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_etl_pipeline', 'reindex_products_elasticsearch', 'manual__2025-06-26T23:31:08.740234+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/restaurant_etl_dag.py', '--cfg-path', '/tmp/tmpqn0i6ph9']
+[2025-06-26T23:31:18.142+0000] {standard_task_runner.py:88} INFO - Job 83: Subtask reindex_products_elasticsearch
+[2025-06-26T23:31:18.190+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_etl_pipeline.reindex_products_elasticsearch manual__2025-06-26T23:31:08.740234+00:00 [running]> on host d3028e9b49fd
+[2025-06-26T23:31:18.288+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-analytics' AIRFLOW_CTX_DAG_ID='restaurant_etl_pipeline' AIRFLOW_CTX_TASK_ID='reindex_products_elasticsearch' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T23:31:08.740234+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-26T23:31:08.740234+00:00'
+[2025-06-26T23:31:18.290+0000] {restaurant_etl_dag.py:339} INFO - 🔄 Reindexando productos en ElasticSearch...
+[2025-06-26T23:31:18.297+0000] {restaurant_etl_dag.py:374} INFO - 📦 Productos a indexar: 18
+[2025-06-26T23:31:18.489+0000] {restaurant_etl_dag.py:385} INFO - 🗑️ Índice anterior eliminado
+[2025-06-26T23:31:18.721+0000] {restaurant_etl_dag.py:415} INFO - ✅ Índice creado exitosamente
+[2025-06-26T23:31:18.755+0000] {restaurant_etl_dag.py:446} INFO -    📦 Indexado: Café Gourmet (ID: 12)
+[2025-06-26T23:31:18.768+0000] {restaurant_etl_dag.py:446} INFO -    📦 Indexado: Torta de Chocolate (ID: 11)
+[2025-06-26T23:31:18.778+0000] {restaurant_etl_dag.py:446} INFO -    📦 Indexado: Casado Típico (ID: 4)
+[2025-06-26T23:31:18.790+0000] {restaurant_etl_dag.py:446} INFO -    📦 Indexado: Pescado a la Plancha (ID: 7)
+[2025-06-26T23:31:18.802+0000] {restaurant_etl_dag.py:446} INFO -    📦 Indexado: Plato del Chef (ID: 17)
+[2025-06-26T23:31:18.938+0000] {restaurant_etl_dag.py:451} INFO - ✅ Productos indexados: 18/18
+[2025-06-26T23:31:18.939+0000] {python.py:201} INFO - Done. Returned value was: {'products_indexed': 18, 'total_products': 18, 'index_name': 'restaurant_products', 'status': 'success'}
+[2025-06-26T23:31:19.001+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_etl_pipeline, task_id=reindex_products_elasticsearch, execution_date=20250626T233108, start_date=20250626T233118, end_date=20250626T233119
+[2025-06-26T23:31:19.035+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-26T23:31:19.052+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

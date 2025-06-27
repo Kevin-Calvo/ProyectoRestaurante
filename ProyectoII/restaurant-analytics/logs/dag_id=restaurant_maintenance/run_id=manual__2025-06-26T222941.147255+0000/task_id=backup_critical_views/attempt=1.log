@@ -1,0 +1,18 @@
+[2025-06-26T22:39:43.927+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_maintenance.backup_critical_views manual__2025-06-26T22:29:41.147255+00:00 [queued]>
+[2025-06-26T22:39:43.943+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_maintenance.backup_critical_views manual__2025-06-26T22:29:41.147255+00:00 [queued]>
+[2025-06-26T22:39:43.944+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-06-26T22:39:43.972+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): backup_critical_views> on 2025-06-26 22:29:41.147255+00:00
+[2025-06-26T22:39:44.000+0000] {standard_task_runner.py:60} INFO - Started process 419 to run task
+[2025-06-26T22:39:44.084+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_maintenance', 'backup_critical_views', 'manual__2025-06-26T22:29:41.147255+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/maintenance_dag.py', '--cfg-path', '/tmp/tmp62c0lgd4']
+[2025-06-26T22:39:44.124+0000] {standard_task_runner.py:88} INFO - Job 75: Subtask backup_critical_views
+[2025-06-26T22:39:44.473+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_maintenance.backup_critical_views manual__2025-06-26T22:29:41.147255+00:00 [running]> on host d3028e9b49fd
+[2025-06-26T22:39:44.973+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-admin' AIRFLOW_CTX_DAG_ID='restaurant_maintenance' AIRFLOW_CTX_TASK_ID='backup_critical_views' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T22:29:41.147255+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-26T22:29:41.147255+00:00'
+[2025-06-26T22:39:44.975+0000] {maintenance_dag.py:227} INFO - 💾 Realizando backup de vistas críticas...
+[2025-06-26T22:39:44.995+0000] {maintenance_dag.py:282} INFO -    💾 vista_ingresos_mes_categoria → backup_vista_ingresos_mes_categoria_20250626_223944 (21 registros)
+[2025-06-26T22:39:45.002+0000] {maintenance_dag.py:282} INFO -    💾 vista_actividad_clientes_zona → backup_vista_actividad_clientes_zona_20250626_223944 (6 registros)
+[2025-06-26T22:39:45.009+0000] {maintenance_dag.py:282} INFO -    💾 vista_estadisticas_pedidos → backup_vista_estadisticas_pedidos_20250626_223944 (6 registros)
+[2025-06-26T22:39:45.012+0000] {maintenance_dag.py:311} INFO - ✅ Backup completado: 3 vistas respaldadas
+[2025-06-26T22:39:45.013+0000] {python.py:201} INFO - Done. Returned value was: {'status': 'success', 'backup_timestamp': '20250626_223944', 'backed_up_views': [{'view': 'vista_ingresos_mes_categoria', 'backup_table': 'backup_vista_ingresos_mes_categoria_20250626_223944', 'records': 21}, {'view': 'vista_actividad_clientes_zona', 'backup_table': 'backup_vista_actividad_clientes_zona_20250626_223944', 'records': 6}, {'view': 'vista_estadisticas_pedidos', 'backup_table': 'backup_vista_estadisticas_pedidos_20250626_223944', 'records': 6}], 'old_backups_cleaned': 0}
+[2025-06-26T22:39:45.041+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_maintenance, task_id=backup_critical_views, execution_date=20250626T222941, start_date=20250626T223943, end_date=20250626T223945
+[2025-06-26T22:39:45.065+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-26T22:39:45.084+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

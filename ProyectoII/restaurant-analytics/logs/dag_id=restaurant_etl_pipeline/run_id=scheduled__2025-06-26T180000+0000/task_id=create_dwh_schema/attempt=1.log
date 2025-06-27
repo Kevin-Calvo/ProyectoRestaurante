@@ -1,0 +1,18 @@
+[2025-06-27T00:00:04.802+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.create_dwh_schema scheduled__2025-06-26T18:00:00+00:00 [queued]>
+[2025-06-27T00:00:04.807+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restaurant_etl_pipeline.create_dwh_schema scheduled__2025-06-26T18:00:00+00:00 [queued]>
+[2025-06-27T00:00:04.808+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2025-06-27T00:00:04.816+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_dwh_schema> on 2025-06-26 18:00:00+00:00
+[2025-06-27T00:00:04.822+0000] {standard_task_runner.py:60} INFO - Started process 2951 to run task
+[2025-06-27T00:00:04.824+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'restaurant_etl_pipeline', 'create_dwh_schema', 'scheduled__2025-06-26T18:00:00+00:00', '--job-id', '87', '--raw', '--subdir', 'DAGS_FOLDER/restaurant_etl_dag.py', '--cfg-path', '/tmp/tmpcu44spco']
+[2025-06-27T00:00:04.825+0000] {standard_task_runner.py:88} INFO - Job 87: Subtask create_dwh_schema
+[2025-06-27T00:00:04.861+0000] {task_command.py:423} INFO - Running <TaskInstance: restaurant_etl_pipeline.create_dwh_schema scheduled__2025-06-26T18:00:00+00:00 [running]> on host d3028e9b49fd
+[2025-06-27T00:00:04.917+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='restaurant-analytics' AIRFLOW_CTX_DAG_ID='restaurant_etl_pipeline' AIRFLOW_CTX_TASK_ID='create_dwh_schema' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-26T18:00:00+00:00'
+[2025-06-27T00:00:04.918+0000] {restaurant_etl_dag.py:177} INFO - 🏗️ Creando esquemas del Data Warehouse...
+[2025-06-27T00:00:04.927+0000] {restaurant_etl_dag.py:261} INFO - ✅ Esquema del Data Warehouse actualizado
+[2025-06-27T00:00:04.928+0000] {restaurant_etl_dag.py:262} INFO -    📊 Vista: vista_dashboard_ingresos_categoria
+[2025-06-27T00:00:04.928+0000] {restaurant_etl_dag.py:263} INFO -    🗺️ Vista: vista_dashboard_actividad_zona
+[2025-06-27T00:00:04.929+0000] {restaurant_etl_dag.py:264} INFO -    📈 Vista: vista_dashboard_estadisticas_pedidos
+[2025-06-27T00:00:04.929+0000] {python.py:201} INFO - Done. Returned value was: {'status': 'success', 'message': 'DWH schema updated'}
+[2025-06-27T00:00:04.946+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=restaurant_etl_pipeline, task_id=create_dwh_schema, execution_date=20250626T180000, start_date=20250627T000004, end_date=20250627T000004
+[2025-06-27T00:00:04.997+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-27T00:00:05.021+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

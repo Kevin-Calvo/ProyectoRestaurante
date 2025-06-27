@@ -1,184 +1,2123 @@
-[2025-06-26T04:46:08.790+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
-[2025-06-26T04:46:08.792+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
-[2025-06-26T04:46:08.793+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
-[2025-06-26T04:46:08.794+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
-[2025-06-26T04:46:08.823+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
-[2025-06-26T04:46:09.356+0000] {manager.py:879} INFO - 
+[2025-06-26T22:33:16.164+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-06-26T22:33:16.165+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-06-26T22:33:16.166+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-26T22:33:16.167+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T22:33:16.200+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T22:33:16.285+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
-/opt/airflow/dags/maintenance_dag.py       238  0.06s             0           0
-/opt/airflow/dags/restaurant_etl_dag.py    235  0.08s             0           0
+/opt/airflow/dags/maintenance_dag.py       190  0.05s             0           0
+/opt/airflow/dags/restaurant_etl_dag.py    193  0.03s             0           0
 ================================================================================
-[2025-06-26T04:46:39.562+0000] {manager.py:879} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       252  0.01s             1           0  0.20s           2025-06-26T04:46:09
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  1.05s           2025-06-26T04:46:10
-================================================================================
-[2025-06-26T04:47:10.018+0000] {manager.py:879} INFO - 
+[2025-06-26T22:33:46.548+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       269  0.01s             1           0  0.27s           2025-06-26T04:46:39
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.38s           2025-06-26T04:46:41
+/opt/airflow/dags/maintenance_dag.py       206  0.02s             1           0  0.10s           2025-06-26T22:33:16
+/opt/airflow/dags/restaurant_etl_dag.py    209  0.01s             1           0  0.11s           2025-06-26T22:33:16
 ================================================================================
-[2025-06-26T04:47:40.351+0000] {manager.py:879} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       286  0.01s             1           0  0.14s           2025-06-26T04:47:10
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.31s           2025-06-26T04:47:11
-================================================================================
-[2025-06-26T04:48:10.651+0000] {manager.py:879} INFO - 
+[2025-06-26T22:34:16.788+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       303  0.01s             1           0  0.12s           2025-06-26T04:47:40
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.33s           2025-06-26T04:47:42
+/opt/airflow/dags/maintenance_dag.py       222  0.02s             1           0  0.11s           2025-06-26T22:33:46
+/opt/airflow/dags/restaurant_etl_dag.py    225  0.00s             1           0  0.10s           2025-06-26T22:33:46
 ================================================================================
-[2025-06-26T04:48:40.987+0000] {manager.py:879} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       320  0.01s             1           0  0.14s           2025-06-26T04:48:10
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.34s           2025-06-26T04:48:13
-================================================================================
-[2025-06-26T04:49:11.290+0000] {manager.py:879} INFO - 
+[2025-06-26T22:34:47.092+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       337  0.01s             1           0  0.10s           2025-06-26T04:48:41
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.31s           2025-06-26T04:48:44
+/opt/airflow/dags/maintenance_dag.py       238  0.02s             1           0  0.11s           2025-06-26T22:34:16
+/opt/airflow/dags/restaurant_etl_dag.py    241  0.00s             1           0  0.11s           2025-06-26T22:34:16
 ================================================================================
-[2025-06-26T04:49:41.653+0000] {manager.py:879} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       361  0.01s             1           0  0.12s           2025-06-26T04:49:11
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.34s           2025-06-26T04:49:14
-================================================================================
-[2025-06-26T04:50:11.967+0000] {manager.py:879} INFO - 
+[2025-06-26T22:35:17.309+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       380  0.01s             1           0  0.11s           2025-06-26T04:49:41
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.37s           2025-06-26T04:49:45
+/opt/airflow/dags/maintenance_dag.py       254  0.02s             1           0  0.13s           2025-06-26T22:34:47
+/opt/airflow/dags/restaurant_etl_dag.py    257  0.00s             1           0  0.12s           2025-06-26T22:34:47
 ================================================================================
-[2025-06-26T04:50:42.293+0000] {manager.py:879} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       397  0.01s             1           0  0.15s           2025-06-26T04:50:12
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.35s           2025-06-26T04:50:16
-================================================================================
-[2025-06-26T04:51:08.873+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
-[2025-06-26T04:51:08.900+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
-[2025-06-26T04:51:12.599+0000] {manager.py:879} INFO - 
+[2025-06-26T22:35:47.579+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       414  0.01s             1           0  0.11s           2025-06-26T04:50:42
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.33s           2025-06-26T04:50:46
+/opt/airflow/dags/maintenance_dag.py       270  0.02s             1           0  0.12s           2025-06-26T22:35:17
+/opt/airflow/dags/restaurant_etl_dag.py    273  0.00s             1           0  0.13s           2025-06-26T22:35:17
 ================================================================================
-[2025-06-26T04:51:42.985+0000] {manager.py:879} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       431  0.01s             1           0  0.20s           2025-06-26T04:51:12
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.54s           2025-06-26T04:51:17
-================================================================================
-[2025-06-26T04:52:13.400+0000] {manager.py:879} INFO - 
+[2025-06-26T22:36:17.871+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       448  0.01s             1           0  0.21s           2025-06-26T04:51:43
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.28s           2025-06-26T04:51:48
+/opt/airflow/dags/maintenance_dag.py       286  0.02s             1           0  0.11s           2025-06-26T22:35:47
+/opt/airflow/dags/restaurant_etl_dag.py    289  0.00s             1           0  0.10s           2025-06-26T22:35:47
 ================================================================================
-[2025-06-26T19:34:12.914+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
-[2025-06-26T19:34:12.916+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
-[2025-06-26T19:34:12.917+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
-[2025-06-26T19:34:12.919+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
-[2025-06-26T19:34:12.959+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
-[2025-06-26T19:34:13.532+0000] {manager.py:879} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
-/opt/airflow/dags/maintenance_dag.py       235  0.42s             0           0
-/opt/airflow/dags/restaurant_etl_dag.py    238  0.08s             0           0
-================================================================================
-[2025-06-26T19:34:44.099+0000] {manager.py:879} INFO - 
+[2025-06-26T22:36:48.192+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py       252  0.01s             1           0  0.54s           2025-06-26T19:34:13
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  1.49s           2025-06-26T19:34:14
+/opt/airflow/dags/maintenance_dag.py       302  0.03s             1           0  0.11s           2025-06-26T22:36:17
+/opt/airflow/dags/restaurant_etl_dag.py    305  0.01s             1           0  0.10s           2025-06-26T22:36:17
 ================================================================================
-[2025-06-26T19:35:14.268+0000] {manager.py:879} INFO - 
+[2025-06-26T22:37:18.503+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       333  0.02s             1           0  0.14s           2025-06-26T22:36:48
+/opt/airflow/dags/restaurant_etl_dag.py    336  0.00s             1           0  0.13s           2025-06-26T22:36:48
+================================================================================
+[2025-06-26T22:37:48.717+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       349  0.02s             1           0  0.10s           2025-06-26T22:37:18
+/opt/airflow/dags/restaurant_etl_dag.py    352  0.00s             1           0  0.10s           2025-06-26T22:37:18
+================================================================================
+[2025-06-26T22:38:16.975+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T22:38:16.995+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T22:38:19.047+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       365  0.02s             1           0  0.11s           2025-06-26T22:37:48
+/opt/airflow/dags/restaurant_etl_dag.py    368  0.01s             1           0  0.10s           2025-06-26T22:37:48
+================================================================================
+[2025-06-26T22:38:49.385+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       381  0.02s             1           0  0.13s           2025-06-26T22:38:19
+/opt/airflow/dags/restaurant_etl_dag.py    384  0.00s             1           0  0.13s           2025-06-26T22:38:19
+================================================================================
+[2025-06-26T22:39:19.683+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       397  0.02s             1           0  0.10s           2025-06-26T22:38:49
+/opt/airflow/dags/restaurant_etl_dag.py    400  0.01s             1           0  0.10s           2025-06-26T22:38:49
+================================================================================
+[2025-06-26T22:39:49.964+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       428  0.02s             1           0  0.10s           2025-06-26T22:39:19
+/opt/airflow/dags/restaurant_etl_dag.py    431  0.01s             1           0  0.10s           2025-06-26T22:39:19
+================================================================================
+[2025-06-26T22:40:20.208+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       444  0.03s             1           0  0.11s           2025-06-26T22:39:50
+/opt/airflow/dags/restaurant_etl_dag.py    447  0.01s             1           0  0.10s           2025-06-26T22:39:50
+================================================================================
+[2025-06-26T22:40:50.526+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       460  0.02s             1           0  0.12s           2025-06-26T22:40:20
+/opt/airflow/dags/restaurant_etl_dag.py    463  0.01s             1           0  0.13s           2025-06-26T22:40:20
+================================================================================
+[2025-06-26T22:41:20.761+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       476  0.03s             1           0  0.12s           2025-06-26T22:40:50
+/opt/airflow/dags/restaurant_etl_dag.py    479  0.01s             1           0  0.11s           2025-06-26T22:40:50
+================================================================================
+[2025-06-26T22:41:50.994+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       492  0.02s             1           0  0.13s           2025-06-26T22:41:20
+/opt/airflow/dags/restaurant_etl_dag.py    495  0.00s             1           0  0.11s           2025-06-26T22:41:20
+================================================================================
+[2025-06-26T22:42:21.295+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       508  0.02s             1           0  0.10s           2025-06-26T22:41:51
+/opt/airflow/dags/restaurant_etl_dag.py    511  0.01s             1           0  0.11s           2025-06-26T22:41:51
+================================================================================
+[2025-06-26T22:42:51.592+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       524  0.02s             1           0  0.11s           2025-06-26T22:42:21
+/opt/airflow/dags/restaurant_etl_dag.py    527  0.00s             1           0  0.11s           2025-06-26T22:42:21
+================================================================================
+[2025-06-26T22:43:17.831+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T22:43:17.858+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T22:43:21.928+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       541  0.02s             1           0  0.10s           2025-06-26T22:42:51
+/opt/airflow/dags/restaurant_etl_dag.py    544  0.01s             1           0  0.09s           2025-06-26T22:42:51
+================================================================================
+[2025-06-26T22:43:52.278+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       557  0.02s             1           0  0.12s           2025-06-26T22:43:22
+/opt/airflow/dags/restaurant_etl_dag.py    560  0.00s             1           0  0.11s           2025-06-26T22:43:22
+================================================================================
+[2025-06-26T22:44:22.521+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       573  0.02s             1           0  0.12s           2025-06-26T22:43:52
+/opt/airflow/dags/restaurant_etl_dag.py    576  0.01s             1           0  0.10s           2025-06-26T22:43:52
+================================================================================
+[2025-06-26T22:44:52.821+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       590  0.02s             1           0  0.12s           2025-06-26T22:44:22
+/opt/airflow/dags/restaurant_etl_dag.py    593  0.01s             1           0  0.12s           2025-06-26T22:44:22
+================================================================================
+[2025-06-26T22:45:23.131+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       606  0.02s             1           0  0.12s           2025-06-26T22:44:52
+/opt/airflow/dags/restaurant_etl_dag.py    609  0.01s             1           0  0.12s           2025-06-26T22:44:52
+================================================================================
+[2025-06-26T22:45:53.429+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       622  0.02s             1           0  0.10s           2025-06-26T22:45:23
+/opt/airflow/dags/restaurant_etl_dag.py    625  0.00s             1           0  0.10s           2025-06-26T22:45:23
+================================================================================
+[2025-06-26T22:46:23.667+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       638  0.02s             1           0  0.10s           2025-06-26T22:45:53
+/opt/airflow/dags/restaurant_etl_dag.py    641  0.00s             1           0  0.09s           2025-06-26T22:45:53
+================================================================================
+[2025-06-26T22:46:53.868+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       654  0.02s             1           0  0.11s           2025-06-26T22:46:23
+/opt/airflow/dags/restaurant_etl_dag.py    657  0.00s             1           0  0.09s           2025-06-26T22:46:23
+================================================================================
+[2025-06-26T22:47:24.220+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       670  0.02s             1           0  0.12s           2025-06-26T22:46:53
+/opt/airflow/dags/restaurant_etl_dag.py    673  0.00s             1           0  0.12s           2025-06-26T22:46:53
+================================================================================
+[2025-06-26T22:47:54.492+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       686  0.02s             1           0  0.09s           2025-06-26T22:47:24
+/opt/airflow/dags/restaurant_etl_dag.py    689  0.00s             1           0  0.09s           2025-06-26T22:47:24
+================================================================================
+[2025-06-26T22:48:18.639+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T22:48:18.676+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T22:48:24.753+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       702  0.02s             1           0  0.09s           2025-06-26T22:47:54
+/opt/airflow/dags/restaurant_etl_dag.py    705  0.00s             1           0  0.09s           2025-06-26T22:47:54
+================================================================================
+[2025-06-26T22:48:54.948+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       718  0.02s             1           0  0.12s           2025-06-26T22:48:24
+/opt/airflow/dags/restaurant_etl_dag.py    721  0.00s             1           0  0.10s           2025-06-26T22:48:24
+================================================================================
+[2025-06-26T22:49:25.255+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       734  0.02s             1           0  0.13s           2025-06-26T22:48:55
+/opt/airflow/dags/restaurant_etl_dag.py    737  0.00s             1           0  0.13s           2025-06-26T22:48:55
+================================================================================
+[2025-06-26T22:49:55.535+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       750  0.02s             1           0  0.10s           2025-06-26T22:49:25
+/opt/airflow/dags/restaurant_etl_dag.py    753  0.00s             1           0  0.10s           2025-06-26T22:49:25
+================================================================================
+[2025-06-26T22:50:25.812+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       766  0.02s             1           0  0.09s           2025-06-26T22:49:55
+/opt/airflow/dags/restaurant_etl_dag.py    769  0.00s             1           0  0.08s           2025-06-26T22:49:55
+================================================================================
+[2025-06-26T22:50:56.099+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       782  0.02s             1           0  0.09s           2025-06-26T22:50:25
+/opt/airflow/dags/restaurant_etl_dag.py    785  0.01s             1           0  0.10s           2025-06-26T22:50:25
+================================================================================
+[2025-06-26T22:51:26.328+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       798  0.02s             1           0  0.12s           2025-06-26T22:50:56
+/opt/airflow/dags/restaurant_etl_dag.py    801  0.01s             1           0  0.12s           2025-06-26T22:50:56
+================================================================================
+[2025-06-26T22:51:56.590+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       814  0.02s             1           0  0.11s           2025-06-26T22:51:26
+/opt/airflow/dags/restaurant_etl_dag.py    817  0.00s             1           0  0.12s           2025-06-26T22:51:26
+================================================================================
+[2025-06-26T22:52:26.877+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       830  0.02s             1           0  0.09s           2025-06-26T22:51:56
+/opt/airflow/dags/restaurant_etl_dag.py    833  0.00s             1           0  0.09s           2025-06-26T22:51:56
+================================================================================
+[2025-06-26T22:52:57.106+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       845  0.02s             1           0  0.10s           2025-06-26T22:52:26
+/opt/airflow/dags/restaurant_etl_dag.py    848  0.01s             1           0  0.09s           2025-06-26T22:52:26
+================================================================================
+[2025-06-26T22:53:19.240+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T22:53:19.257+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T22:53:27.336+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       861  0.02s             1           0  0.10s           2025-06-26T22:52:57
+/opt/airflow/dags/restaurant_etl_dag.py    864  0.00s             1           0  0.09s           2025-06-26T22:52:57
+================================================================================
+[2025-06-26T22:53:57.573+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       877  0.02s             1           0  0.11s           2025-06-26T22:53:27
+/opt/airflow/dags/restaurant_etl_dag.py    880  0.00s             1           0  0.11s           2025-06-26T22:53:27
+================================================================================
+[2025-06-26T22:54:27.788+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       893  0.02s             1           0  0.09s           2025-06-26T22:53:57
+/opt/airflow/dags/restaurant_etl_dag.py    896  0.00s             1           0  0.09s           2025-06-26T22:53:57
+================================================================================
+[2025-06-26T22:54:58.074+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.43s           2025-06-26T22:54:28
+/opt/airflow/dags/restaurant_etl_dag.py    908  0.01s             1           0  0.08s           2025-06-26T22:54:27
+================================================================================
+[2025-06-26T22:55:28.771+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       924  0.02s             1           0  0.20s           2025-06-26T22:54:58
+/opt/airflow/dags/restaurant_etl_dag.py    927  0.00s             1           0  0.25s           2025-06-26T22:54:58
+================================================================================
+[2025-06-26T22:55:59.063+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       940  0.02s             1           0  0.10s           2025-06-26T22:55:28
+/opt/airflow/dags/restaurant_etl_dag.py    943  0.00s             1           0  0.09s           2025-06-26T22:55:28
+================================================================================
+[2025-06-26T22:56:29.261+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       956  0.02s             1           0  0.10s           2025-06-26T22:55:59
+/opt/airflow/dags/restaurant_etl_dag.py    959  0.00s             1           0  0.08s           2025-06-26T22:55:59
+================================================================================
+[2025-06-26T22:56:59.538+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       973  0.02s             1           0  0.09s           2025-06-26T22:56:29
+/opt/airflow/dags/restaurant_etl_dag.py    976  0.01s             1           0  0.08s           2025-06-26T22:56:29
+================================================================================
+[2025-06-26T22:57:29.819+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py       989  0.02s             1           0  0.10s           2025-06-26T22:56:59
+/opt/airflow/dags/restaurant_etl_dag.py    992  0.00s             1           0  0.09s           2025-06-26T22:56:59
+================================================================================
+[2025-06-26T22:58:00.052+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1005  0.02s             1           0  0.09s           2025-06-26T22:57:29
+/opt/airflow/dags/restaurant_etl_dag.py   1008  0.00s             1           0  0.08s           2025-06-26T22:57:29
+================================================================================
+[2025-06-26T22:58:20.166+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T22:58:20.190+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T22:58:30.286+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1021  0.02s             1           0  0.10s           2025-06-26T22:58:00
+/opt/airflow/dags/restaurant_etl_dag.py   1024  0.01s             1           0  0.09s           2025-06-26T22:58:00
+================================================================================
+[2025-06-26T22:59:00.596+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1037  0.02s             1           0  0.10s           2025-06-26T22:58:30
+/opt/airflow/dags/restaurant_etl_dag.py   1040  0.00s             1           0  0.09s           2025-06-26T22:58:30
+================================================================================
+[2025-06-26T22:59:30.906+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1053  0.08s             1           0  0.09s           2025-06-26T22:59:00
+/opt/airflow/dags/restaurant_etl_dag.py   1056  0.00s             1           0  0.09s           2025-06-26T22:59:00
+================================================================================
+[2025-06-26T23:00:01.133+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1070  0.02s             1           0  0.17s           2025-06-26T22:59:30
+/opt/airflow/dags/restaurant_etl_dag.py   1073  0.00s             1           0  0.14s           2025-06-26T22:59:31
+================================================================================
+[2025-06-26T23:00:31.441+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1086  0.02s             1           0  0.12s           2025-06-26T23:00:01
+/opt/airflow/dags/restaurant_etl_dag.py   1089  0.00s             1           0  0.11s           2025-06-26T23:00:01
+================================================================================
+[2025-06-26T23:01:01.716+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1102  0.02s             1           0  0.09s           2025-06-26T23:00:31
+/opt/airflow/dags/restaurant_etl_dag.py   1105  0.00s             1           0  0.09s           2025-06-26T23:00:31
+================================================================================
+[2025-06-26T23:01:31.983+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1118  0.02s             1           0  0.10s           2025-06-26T23:01:01
+/opt/airflow/dags/restaurant_etl_dag.py   1121  0.01s             1           0  0.09s           2025-06-26T23:01:01
+================================================================================
+[2025-06-26T23:02:02.282+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1135  0.02s             1           0  0.09s           2025-06-26T23:01:32
+/opt/airflow/dags/restaurant_etl_dag.py   1138  0.00s             1           0  0.09s           2025-06-26T23:01:32
+================================================================================
+[2025-06-26T23:02:32.477+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1151  0.02s             1           0  0.11s           2025-06-26T23:02:02
+/opt/airflow/dags/restaurant_etl_dag.py   1154  0.00s             1           0  0.08s           2025-06-26T23:02:02
+================================================================================
+[2025-06-26T23:03:02.697+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1167  0.02s             1           0  0.09s           2025-06-26T23:02:32
+/opt/airflow/dags/restaurant_etl_dag.py   1170  0.01s             1           0  0.11s           2025-06-26T23:02:32
+================================================================================
+[2025-06-26T23:03:20.886+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:03:20.905+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:03:33.013+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1183  0.02s             1           0  0.09s           2025-06-26T23:03:02
+/opt/airflow/dags/restaurant_etl_dag.py   1186  0.00s             1           0  0.09s           2025-06-26T23:03:02
+================================================================================
+[2025-06-26T23:04:03.226+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1199  0.02s             1           0  0.09s           2025-06-26T23:03:33
+/opt/airflow/dags/restaurant_etl_dag.py   1202  0.00s             1           0  0.08s           2025-06-26T23:03:33
+================================================================================
+[2025-06-26T23:04:33.456+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1215  0.02s             1           0  0.11s           2025-06-26T23:04:03
+/opt/airflow/dags/restaurant_etl_dag.py   1218  0.01s             1           0  0.10s           2025-06-26T23:04:03
+================================================================================
+[2025-06-26T23:05:03.686+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1231  0.02s             1           0  0.14s           2025-06-26T23:04:33
+/opt/airflow/dags/restaurant_etl_dag.py   1234  0.01s             1           0  0.10s           2025-06-26T23:04:33
+================================================================================
+[2025-06-26T23:05:33.992+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1248  0.02s             1           0  0.14s           2025-06-26T23:05:03
+/opt/airflow/dags/restaurant_etl_dag.py   1251  0.00s             1           0  0.13s           2025-06-26T23:05:03
+================================================================================
+[2025-06-26T23:06:04.276+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1264  0.02s             1           0  0.11s           2025-06-26T23:05:34
+/opt/airflow/dags/restaurant_etl_dag.py   1267  0.00s             1           0  0.11s           2025-06-26T23:05:34
+================================================================================
+[2025-06-26T23:06:34.489+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1280  0.02s             1           0  0.09s           2025-06-26T23:06:04
+/opt/airflow/dags/restaurant_etl_dag.py   1283  0.00s             1           0  0.08s           2025-06-26T23:06:04
+================================================================================
+[2025-06-26T23:07:04.683+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1296  0.02s             1           0  0.09s           2025-06-26T23:06:34
+/opt/airflow/dags/restaurant_etl_dag.py   1299  0.00s             1           0  0.08s           2025-06-26T23:06:34
+================================================================================
+[2025-06-26T23:07:34.991+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1312  0.02s             1           0  0.10s           2025-06-26T23:07:04
+/opt/airflow/dags/restaurant_etl_dag.py   1315  0.00s             1           0  0.09s           2025-06-26T23:07:04
+================================================================================
+[2025-06-26T23:08:05.270+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1328  0.02s             1           0  0.10s           2025-06-26T23:07:35
+/opt/airflow/dags/restaurant_etl_dag.py   1331  0.01s             1           0  0.09s           2025-06-26T23:07:35
+================================================================================
+[2025-06-26T23:08:21.455+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:08:21.478+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:08:35.606+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1344  0.02s             1           0  0.09s           2025-06-26T23:08:05
+/opt/airflow/dags/restaurant_etl_dag.py   1347  0.00s             1           0  0.09s           2025-06-26T23:08:05
+================================================================================
+[2025-06-26T23:09:05.859+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1359  0.02s             1           0  0.09s           2025-06-26T23:08:35
+/opt/airflow/dags/restaurant_etl_dag.py   1362  0.01s             1           0  0.09s           2025-06-26T23:08:35
+================================================================================
+[2025-06-26T23:09:36.108+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1375  0.02s             1           0  0.11s           2025-06-26T23:09:05
+/opt/airflow/dags/restaurant_etl_dag.py   1378  0.01s             1           0  0.10s           2025-06-26T23:09:05
+================================================================================
+[2025-06-26T23:10:06.375+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1391  0.02s             1           0  0.11s           2025-06-26T23:09:36
+/opt/airflow/dags/restaurant_etl_dag.py   1394  0.00s             1           0  0.11s           2025-06-26T23:09:36
+================================================================================
+[2025-06-26T23:10:36.667+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1407  0.02s             1           0  0.10s           2025-06-26T23:10:06
+/opt/airflow/dags/restaurant_etl_dag.py   1410  0.01s             1           0  0.09s           2025-06-26T23:10:06
+================================================================================
+[2025-06-26T23:11:06.992+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1423  0.02s             1           0  0.12s           2025-06-26T23:10:36
+/opt/airflow/dags/restaurant_etl_dag.py   1426  0.00s             1           0  0.10s           2025-06-26T23:10:36
+================================================================================
+[2025-06-26T23:11:37.195+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1439  0.02s             1           0  0.10s           2025-06-26T23:11:07
+/opt/airflow/dags/restaurant_etl_dag.py   1442  0.00s             1           0  0.09s           2025-06-26T23:11:07
+================================================================================
+[2025-06-26T23:12:07.425+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1455  0.02s             1           0  0.10s           2025-06-26T23:11:37
+/opt/airflow/dags/restaurant_etl_dag.py   1458  0.00s             1           0  0.10s           2025-06-26T23:11:37
+================================================================================
+[2025-06-26T23:12:37.722+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1477  0.02s             1           0  0.10s           2025-06-26T23:12:07
+/opt/airflow/dags/restaurant_etl_dag.py   1480  0.01s             1           0  0.10s           2025-06-26T23:12:07
+================================================================================
+[2025-06-26T23:13:08.004+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1493  0.02s             1           0  0.10s           2025-06-26T23:12:37
+/opt/airflow/dags/restaurant_etl_dag.py   1496  0.01s             1           0  0.10s           2025-06-26T23:12:37
+================================================================================
+[2025-06-26T23:13:22.155+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:13:22.171+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:13:38.285+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1509  0.02s             1           0  0.09s           2025-06-26T23:13:08
+/opt/airflow/dags/restaurant_etl_dag.py   1512  0.01s             1           0  0.09s           2025-06-26T23:13:08
+================================================================================
+[2025-06-26T23:14:08.490+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1525  0.02s             1           0  0.11s           2025-06-26T23:13:38
+/opt/airflow/dags/restaurant_etl_dag.py   1528  0.00s             1           0  0.10s           2025-06-26T23:13:38
+================================================================================
+[2025-06-26T23:14:38.721+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1541  0.02s             1           0  0.11s           2025-06-26T23:14:08
+/opt/airflow/dags/restaurant_etl_dag.py   1544  0.00s             1           0  0.09s           2025-06-26T23:14:08
+================================================================================
+[2025-06-26T23:15:08.910+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1557  0.02s             1           0  0.09s           2025-06-26T23:14:38
+/opt/airflow/dags/restaurant_etl_dag.py   1560  0.01s             1           0  0.09s           2025-06-26T23:14:38
+================================================================================
+[2025-06-26T23:15:39.185+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1573  0.02s             1           0  0.09s           2025-06-26T23:15:08
+/opt/airflow/dags/restaurant_etl_dag.py   1576  0.00s             1           0  0.09s           2025-06-26T23:15:08
+================================================================================
+[2025-06-26T23:16:09.388+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1590  0.02s             1           0  0.10s           2025-06-26T23:15:39
+/opt/airflow/dags/restaurant_etl_dag.py   1593  0.00s             1           0  0.09s           2025-06-26T23:15:39
+================================================================================
+[2025-06-26T23:16:39.687+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1606  0.02s             1           0  0.11s           2025-06-26T23:16:09
+/opt/airflow/dags/restaurant_etl_dag.py   1609  0.00s             1           0  0.11s           2025-06-26T23:16:09
+================================================================================
+[2025-06-26T23:17:09.889+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1622  0.02s             1           0  0.10s           2025-06-26T23:16:39
+/opt/airflow/dags/restaurant_etl_dag.py   1625  0.00s             1           0  0.10s           2025-06-26T23:16:39
+================================================================================
+[2025-06-26T23:17:40.171+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1638  0.02s             1           0  0.10s           2025-06-26T23:17:09
+/opt/airflow/dags/restaurant_etl_dag.py   1641  0.01s             1           0  0.10s           2025-06-26T23:17:09
+================================================================================
+[2025-06-26T23:18:10.663+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1654  0.02s             1           0  0.09s           2025-06-26T23:17:40
+/opt/airflow/dags/restaurant_etl_dag.py   1657  0.00s             1           0  0.08s           2025-06-26T23:17:40
+================================================================================
+[2025-06-26T23:18:22.734+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:18:22.755+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:18:40.890+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1670  0.02s             1           0  0.11s           2025-06-26T23:18:10
+/opt/airflow/dags/restaurant_etl_dag.py   1673  0.00s             1           0  0.10s           2025-06-26T23:18:10
+================================================================================
+[2025-06-26T23:19:11.100+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1686  0.02s             1           0  0.10s           2025-06-26T23:18:40
+/opt/airflow/dags/restaurant_etl_dag.py   1689  0.00s             1           0  0.09s           2025-06-26T23:18:40
+================================================================================
+[2025-06-26T23:19:41.386+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1702  0.02s             1           0  0.22s           2025-06-26T23:19:11
+/opt/airflow/dags/restaurant_etl_dag.py   1705  0.00s             1           0  0.09s           2025-06-26T23:19:11
+================================================================================
+[2025-06-26T23:20:11.690+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1719  0.02s             1           0  0.10s           2025-06-26T23:19:41
+/opt/airflow/dags/restaurant_etl_dag.py   1722  0.00s             1           0  0.21s           2025-06-26T23:19:41
+================================================================================
+[2025-06-26T23:20:42.085+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1735  0.12s             1           0  0.09s           2025-06-26T23:20:11
+/opt/airflow/dags/restaurant_etl_dag.py   1738  0.00s             1           0  0.08s           2025-06-26T23:20:11
+================================================================================
+[2025-06-26T23:21:12.331+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1751  0.02s             1           0  0.18s           2025-06-26T23:20:42
+/opt/airflow/dags/restaurant_etl_dag.py   1754  0.01s             1           0  0.08s           2025-06-26T23:20:42
+================================================================================
+[2025-06-26T23:21:42.544+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1767  0.02s             1           0  0.11s           2025-06-26T23:21:12
+/opt/airflow/dags/restaurant_etl_dag.py   1770  0.01s             1           0  0.09s           2025-06-26T23:21:12
+================================================================================
+[2025-06-26T23:22:12.752+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1784  0.02s             1           0  0.11s           2025-06-26T23:21:42
+/opt/airflow/dags/restaurant_etl_dag.py   1787  0.00s             1           0  0.11s           2025-06-26T23:21:42
+================================================================================
+[2025-06-26T23:22:42.969+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1800  0.02s             1           0  0.09s           2025-06-26T23:22:12
+/opt/airflow/dags/restaurant_etl_dag.py   1803  0.00s             1           0  0.08s           2025-06-26T23:22:12
+================================================================================
+[2025-06-26T23:23:13.178+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1816  0.02s             1           0  0.11s           2025-06-26T23:22:43
+/opt/airflow/dags/restaurant_etl_dag.py   1819  0.01s             1           0  0.11s           2025-06-26T23:22:43
+================================================================================
+[2025-06-26T23:23:23.295+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:23:23.317+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:23:43.472+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1832  0.02s             1           0  0.10s           2025-06-26T23:23:13
+/opt/airflow/dags/restaurant_etl_dag.py   1835  0.00s             1           0  0.08s           2025-06-26T23:23:13
+================================================================================
+[2025-06-26T23:24:13.744+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1848  0.02s             1           0  0.09s           2025-06-26T23:23:43
+/opt/airflow/dags/restaurant_etl_dag.py   1851  0.00s             1           0  0.08s           2025-06-26T23:23:43
+================================================================================
+[2025-06-26T23:24:43.951+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1864  0.02s             1           0  0.09s           2025-06-26T23:24:13
+/opt/airflow/dags/restaurant_etl_dag.py   1867  0.01s             1           0  0.09s           2025-06-26T23:24:13
+================================================================================
+[2025-06-26T23:25:14.144+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1881  0.02s             1           0  0.13s           2025-06-26T23:24:44
+/opt/airflow/dags/restaurant_etl_dag.py   1884  0.00s             1           0  0.13s           2025-06-26T23:24:44
+================================================================================
+[2025-06-26T23:25:44.431+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1897  0.02s             1           0  0.10s           2025-06-26T23:25:14
+/opt/airflow/dags/restaurant_etl_dag.py   1900  0.00s             1           0  0.08s           2025-06-26T23:25:14
+================================================================================
+[2025-06-26T23:26:14.762+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1913  0.02s             1           0  0.13s           2025-06-26T23:25:44
+/opt/airflow/dags/restaurant_etl_dag.py   1916  0.01s             1           0  0.13s           2025-06-26T23:25:44
+================================================================================
+[2025-06-26T23:26:45.070+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1929  0.02s             1           0  0.11s           2025-06-26T23:26:14
+/opt/airflow/dags/restaurant_etl_dag.py   1932  0.00s             1           0  0.10s           2025-06-26T23:26:14
+================================================================================
+[2025-06-26T23:27:15.286+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1945  0.02s             1           0  0.10s           2025-06-26T23:26:45
+/opt/airflow/dags/restaurant_etl_dag.py   1948  0.00s             1           0  0.08s           2025-06-26T23:26:45
+================================================================================
+[2025-06-26T23:27:45.506+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1961  0.02s             1           0  0.10s           2025-06-26T23:27:15
+/opt/airflow/dags/restaurant_etl_dag.py   1964  0.00s             1           0  0.09s           2025-06-26T23:27:15
+================================================================================
+[2025-06-26T23:28:15.772+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1977  0.02s             1           0  0.10s           2025-06-26T23:27:45
+/opt/airflow/dags/restaurant_etl_dag.py   1980  0.00s             1           0  0.09s           2025-06-26T23:27:45
+================================================================================
+[2025-06-26T23:28:23.902+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:28:23.920+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:28:46.093+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      1993  0.02s             1           0  0.10s           2025-06-26T23:28:15
+/opt/airflow/dags/restaurant_etl_dag.py   1996  0.00s             1           0  0.09s           2025-06-26T23:28:15
+================================================================================
+[2025-06-26T23:29:16.306+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2009  0.02s             1           0  0.12s           2025-06-26T23:28:46
+/opt/airflow/dags/restaurant_etl_dag.py   2012  0.00s             1           0  0.11s           2025-06-26T23:28:46
+================================================================================
+[2025-06-26T23:29:46.572+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2025  0.02s             1           0  0.10s           2025-06-26T23:29:16
+/opt/airflow/dags/restaurant_etl_dag.py   2028  0.01s             1           0  0.09s           2025-06-26T23:29:16
+================================================================================
+[2025-06-26T23:30:16.916+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2041  0.02s             1           0  0.11s           2025-06-26T23:29:46
+/opt/airflow/dags/restaurant_etl_dag.py   2044  0.00s             1           0  0.10s           2025-06-26T23:29:46
+================================================================================
+[2025-06-26T23:30:47.196+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2057  0.02s             1           0  0.10s           2025-06-26T23:30:16
+/opt/airflow/dags/restaurant_etl_dag.py   2060  0.01s             1           0  0.09s           2025-06-26T23:30:17
+================================================================================
+[2025-06-26T23:31:17.498+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2084  0.03s             1           0  0.09s           2025-06-26T23:30:47
+/opt/airflow/dags/restaurant_etl_dag.py   2087  0.01s             1           0  0.10s           2025-06-26T23:30:47
+================================================================================
+[2025-06-26T23:31:47.798+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2104  0.02s             1           0  0.11s           2025-06-26T23:31:17
+/opt/airflow/dags/restaurant_etl_dag.py   2107  0.01s             1           0  0.11s           2025-06-26T23:31:17
+================================================================================
+[2025-06-26T23:32:18.114+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2120  0.02s             1           0  0.10s           2025-06-26T23:31:47
+/opt/airflow/dags/restaurant_etl_dag.py   2123  0.01s             1           0  0.10s           2025-06-26T23:31:47
+================================================================================
+[2025-06-26T23:32:48.327+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2135  0.02s             1           0  0.10s           2025-06-26T23:32:18
+/opt/airflow/dags/restaurant_etl_dag.py   2138  0.00s             1           0  0.09s           2025-06-26T23:32:18
+================================================================================
+[2025-06-26T23:33:18.627+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2151  0.02s             1           0  0.10s           2025-06-26T23:32:48
+/opt/airflow/dags/restaurant_etl_dag.py   2154  0.01s             1           0  0.09s           2025-06-26T23:32:48
+================================================================================
+[2025-06-26T23:33:24.663+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:33:24.680+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:33:48.857+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2167  0.02s             1           0  0.10s           2025-06-26T23:33:18
+/opt/airflow/dags/restaurant_etl_dag.py   2170  0.00s             1           0  0.10s           2025-06-26T23:33:18
+================================================================================
+[2025-06-26T23:34:19.049+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2183  0.02s             1           0  0.11s           2025-06-26T23:33:48
+/opt/airflow/dags/restaurant_etl_dag.py   2186  0.00s             1           0  0.12s           2025-06-26T23:33:48
+================================================================================
+[2025-06-26T23:34:49.401+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py      2199  0.08s             1           0  0.09s           2025-06-26T23:34:19
+/opt/airflow/dags/restaurant_etl_dag.py   2202  0.02s             1           0  0.09s           2025-06-26T23:34:19
+================================================================================
+[2025-06-26T23:35:19.618+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py                              1           0  0.27s           2025-06-26T19:34:44
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.64s           2025-06-26T19:34:45
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.66s           2025-06-26T23:34:49
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.60s           2025-06-26T23:34:49
 ================================================================================
-[2025-06-26T19:35:45.011+0000] {manager.py:879} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py                              1           0  1.02s           2025-06-26T19:35:15
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.51s           2025-06-26T19:35:16
-================================================================================
-[2025-06-26T19:36:15.322+0000] {manager.py:879} INFO - 
+[2025-06-26T23:35:49.997+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py                              1           0  0.13s           2025-06-26T19:35:46
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.40s           2025-06-26T19:35:47
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.68s           2025-06-26T23:35:20
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.70s           2025-06-26T23:35:20
 ================================================================================
-[2025-06-26T19:36:45.669+0000] {manager.py:879} INFO - 
+[2025-06-26T23:36:20.240+0000] {manager.py:879} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
 ---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/maintenance_dag.py                              1           0  0.14s           2025-06-26T19:36:16
-/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.40s           2025-06-26T19:36:17
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.21s           2025-06-26T23:35:51
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.19s           2025-06-26T23:35:51
 ================================================================================
-[2025-06-26T19:36:55.621+0000] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-26T23:36:50.539+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:36:21
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:36:21
+================================================================================
+[2025-06-26T23:37:20.828+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:36:51
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:36:51
+================================================================================
+[2025-06-26T23:37:51.044+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-26T23:37:21
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:37:21
+================================================================================
+[2025-06-26T23:38:21.328+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:37:52
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:37:52
+================================================================================
+[2025-06-26T23:38:25.465+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:38:25.484+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:38:51.652+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:38:22
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:38:22
+================================================================================
+[2025-06-26T23:39:21.948+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:38:52
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:38:52
+================================================================================
+[2025-06-26T23:39:52.244+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:39:23
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:39:23
+================================================================================
+[2025-06-26T23:40:22.460+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.12s           2025-06-26T23:39:53
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:39:53
+================================================================================
+[2025-06-26T23:40:52.748+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-26T23:40:23
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:40:23
+================================================================================
+[2025-06-26T23:41:22.964+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.12s           2025-06-26T23:40:53
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:40:53
+================================================================================
+[2025-06-26T23:41:53.239+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:41:24
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:41:24
+================================================================================
+[2025-06-26T23:42:23.467+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:41:54
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.08s           2025-06-26T23:41:54
+================================================================================
+[2025-06-26T23:42:53.686+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-26T23:42:24
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.08s           2025-06-26T23:42:24
+================================================================================
+[2025-06-26T23:43:23.999+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.08s           2025-06-26T23:42:54
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.08s           2025-06-26T23:42:54
+================================================================================
+[2025-06-26T23:43:26.039+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:43:26.056+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:43:54.273+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-26T23:43:25
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.08s           2025-06-26T23:43:25
+================================================================================
+[2025-06-26T23:46:49.773+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.28s           2025-06-26T23:46:21
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.28s           2025-06-26T23:46:21
+================================================================================
+[2025-06-26T23:47:20.065+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-26T23:46:51
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:46:51
+================================================================================
+[2025-06-26T23:47:50.283+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-26T23:47:22
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:47:22
+================================================================================
+[2025-06-26T23:48:20.523+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-26T23:47:52
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.12s           2025-06-26T23:47:52
+================================================================================
+[2025-06-26T23:48:26.610+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:48:26.627+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:48:50.770+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:48:22
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:48:22
+================================================================================
+[2025-06-26T23:49:21.041+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:48:52
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:48:52
+================================================================================
+[2025-06-26T23:49:51.347+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-26T23:49:23
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:49:23
+================================================================================
+[2025-06-26T23:50:21.627+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-26T23:49:53
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:49:53
+================================================================================
+[2025-06-26T23:50:51.888+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:50:23
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:50:23
+================================================================================
+[2025-06-26T23:51:22.181+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-26T23:50:53
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:50:54
+================================================================================
+[2025-06-26T23:51:52.403+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.13s           2025-06-26T23:51:24
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:51:24
+================================================================================
+[2025-06-26T23:52:22.731+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:51:54
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:51:54
+================================================================================
+[2025-06-26T23:52:53.055+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.12s           2025-06-26T23:52:24
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.12s           2025-06-26T23:52:24
+================================================================================
+[2025-06-26T23:53:23.292+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.13s           2025-06-26T23:52:55
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.12s           2025-06-26T23:52:55
+================================================================================
+[2025-06-26T23:53:27.382+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:53:27.404+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:53:53.565+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:53:25
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:53:25
+================================================================================
+[2025-06-26T23:54:23.761+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.12s           2025-06-26T23:53:55
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:53:55
+================================================================================
+[2025-06-26T23:54:54.035+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:54:25
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:54:25
+================================================================================
+[2025-06-26T23:55:24.257+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:54:56
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:54:56
+================================================================================
+[2025-06-26T23:55:54.468+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:55:26
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:55:26
+================================================================================
+[2025-06-26T23:56:24.757+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:55:56
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:55:56
+================================================================================
+[2025-06-26T23:56:55.071+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-26T23:56:26
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:56:26
+================================================================================
+[2025-06-26T23:57:25.336+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.12s           2025-06-26T23:56:57
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:56:57
+================================================================================
+[2025-06-26T23:57:55.704+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:57:27
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-26T23:57:27
+================================================================================
+[2025-06-26T23:58:25.916+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.12s           2025-06-26T23:57:57
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:57:57
+================================================================================
+[2025-06-26T23:58:27.928+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-26T23:58:27.960+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-26T23:58:56.165+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:58:28
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:58:28
+================================================================================
+[2025-06-26T23:59:26.480+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-26T23:58:58
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-26T23:58:58
+================================================================================
+[2025-06-26T23:59:57.193+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.48s           2025-06-26T23:59:28
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.39s           2025-06-26T23:59:29
+================================================================================
+[2025-06-27T00:00:27.533+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-26T23:59:59
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-26T23:59:59
+================================================================================
+[2025-06-27T00:00:57.825+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.24s           2025-06-27T00:00:29
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.24s           2025-06-27T00:00:29
+================================================================================
+[2025-06-27T00:01:28.142+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:00:59
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-27T00:00:59
+================================================================================
+[2025-06-27T00:01:58.622+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:01:30
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:01:30
+================================================================================
+[2025-06-27T00:02:28.898+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:02:00
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:02:00
+================================================================================
+[2025-06-27T00:02:59.143+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:02:31
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:02:31
+================================================================================
+[2025-06-27T00:03:28.383+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-27T00:03:28.406+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-27T00:03:29.420+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:03:01
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-27T00:03:01
+================================================================================
+[2025-06-27T00:03:59.729+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:03:31
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:03:31
+================================================================================
+[2025-06-27T00:04:30.035+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:04:01
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:04:01
+================================================================================
+[2025-06-27T00:05:00.320+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:04:32
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:04:32
+================================================================================
+[2025-06-27T00:05:30.553+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:05:02
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:05:02
+================================================================================
+[2025-06-27T00:06:00.876+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:05:32
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.12s           2025-06-27T00:05:32
+================================================================================
+[2025-06-27T00:06:31.259+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:06:03
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.12s           2025-06-27T00:06:03
+================================================================================
+[2025-06-27T00:07:01.504+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:06:33
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:06:33
+================================================================================
+[2025-06-27T00:07:31.801+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:07:03
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:07:03
+================================================================================
+[2025-06-27T00:08:02.136+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:07:33
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:07:33
+================================================================================
+[2025-06-27T00:08:28.505+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-27T00:08:28.526+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-27T00:08:32.381+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.21s           2025-06-27T00:08:04
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.21s           2025-06-27T00:08:04
+================================================================================
+[2025-06-27T00:09:02.657+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:08:34
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:08:34
+================================================================================
+[2025-06-27T00:09:32.959+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:09:04
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:09:04
+================================================================================
+[2025-06-27T00:10:03.181+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.12s           2025-06-27T00:09:35
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-27T00:09:35
+================================================================================
+[2025-06-27T00:10:33.502+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:10:05
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:10:05
+================================================================================
+[2025-06-27T00:11:03.557+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.86s           2025-06-27T00:10:36
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-27T00:10:35
+================================================================================
+[2025-06-27T00:11:34.112+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:11:06
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:11:05
+================================================================================
+[2025-06-27T00:12:04.404+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.26s           2025-06-27T00:11:37
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:11:36
+================================================================================
+[2025-06-27T00:12:34.797+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:12:07
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.19s           2025-06-27T00:12:06
+================================================================================
+[2025-06-27T00:13:05.185+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.18s           2025-06-27T00:12:38
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.18s           2025-06-27T00:12:37
+================================================================================
+[2025-06-27T00:13:28.587+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-27T00:13:28.617+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-27T00:13:35.670+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:13:08
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:13:07
+================================================================================
+[2025-06-27T00:14:05.968+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:13:38
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:13:37
+================================================================================
+[2025-06-27T00:14:36.264+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:14:09
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:14:08
+================================================================================
+[2025-06-27T00:15:06.574+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:14:39
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-27T00:14:38
+================================================================================
+[2025-06-27T00:15:36.798+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:15:09
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.16s           2025-06-27T00:15:08
+================================================================================
+[2025-06-27T00:16:07.123+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:15:39
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:15:38
+================================================================================
+[2025-06-27T00:16:37.400+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:16:10
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:16:09
+================================================================================
+[2025-06-27T00:17:07.595+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:16:40
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-27T00:16:39
+================================================================================
+[2025-06-27T00:17:37.901+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:17:10
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:17:09
+================================================================================
+[2025-06-27T00:18:08.184+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:17:41
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:17:40
+================================================================================
+[2025-06-27T00:18:29.411+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-27T00:18:29.433+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-27T00:18:38.502+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:18:11
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:18:10
+================================================================================
+[2025-06-27T00:19:08.795+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:18:41
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:18:40
+================================================================================
+[2025-06-27T00:19:39.078+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:19:11
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:19:10
+================================================================================
+[2025-06-27T00:20:09.356+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:19:42
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:19:41
+================================================================================
+[2025-06-27T00:20:39.588+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:20:12
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:20:11
+================================================================================
+[2025-06-27T00:21:09.842+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:20:42
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-27T00:20:41
+================================================================================
+[2025-06-27T00:21:40.127+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:21:12
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:21:11
+================================================================================
+[2025-06-27T00:22:10.403+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:21:43
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:21:42
+================================================================================
+[2025-06-27T00:22:40.695+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:22:13
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:22:12
+================================================================================
+[2025-06-27T00:23:11.006+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:22:43
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:22:42
+================================================================================
+[2025-06-27T00:23:30.226+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-27T00:23:30.247+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-27T00:23:41.312+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:23:14
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:23:13
+================================================================================
+[2025-06-27T00:24:11.611+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.11s           2025-06-27T00:23:44
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:23:43
+================================================================================
+[2025-06-27T00:24:41.900+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:24:14
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:24:13
+================================================================================
+[2025-06-27T00:25:12.198+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:24:45
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:24:44
+================================================================================
+[2025-06-27T00:25:42.470+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:25:15
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:25:14
+================================================================================
+[2025-06-27T00:26:12.783+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:25:45
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:25:44
+================================================================================
+[2025-06-27T00:26:43.071+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:26:15
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:26:14
+================================================================================
+[2025-06-27T00:27:13.358+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:26:46
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:26:45
+================================================================================
+[2025-06-27T00:27:43.658+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:27:16
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:27:15
+================================================================================
+[2025-06-27T00:28:13.884+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:27:46
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:27:45
+================================================================================
+[2025-06-27T00:28:31.103+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-27T00:28:31.122+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-27T00:28:44.212+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:28:17
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.09s           2025-06-27T00:28:15
+================================================================================
+[2025-06-27T00:29:14.516+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:28:47
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:28:46
+================================================================================
+[2025-06-27T00:29:44.832+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:29:17
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.10s           2025-06-27T00:29:16
+================================================================================
+[2025-06-27T00:30:15.066+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.10s           2025-06-27T00:29:47
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.11s           2025-06-27T00:29:46
+================================================================================
+[2025-06-27T00:30:45.342+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.09s           2025-06-27T00:30:18
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.08s           2025-06-27T00:30:17
+================================================================================
+[2025-06-27T02:06:23.643+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-06-27T02:06:26.094+0000] {manager.py:741} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-27T02:06:53.664+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/maintenance_dag.py                              1           0  0.50s           2025-06-27T02:06:26
+/opt/airflow/dags/restaurant_etl_dag.py                           1           0  0.26s           2025-06-27T02:06:26
+================================================================================
